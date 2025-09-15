@@ -1,0 +1,141 @@
+{ 
+  "ribbontitle":"Research",
+  "ribbondesc":"Advancing the frontiers of computational multiphysics through innovative research and cutting-edge numerical methods.",
+  "Assistant Research Scientist": [
+    {
+      "title": "Development of Second",
+      "subtitle": "Development of Second Generation of Reactive Hydrocode SCIMITAR3Dv2.0",
+      "icon": "🌊",
+      "overview": "SCIMITAR3D is a sharp interface Cartesian grid-based reactive multiphase, multi-material hydrocode that is in development for past 20 years, to solve high speed impact, collision, penetration, and fragmentation problems. I am one of the key developers of second-generation version of SCIMITAR3D contributing to significant new capabilities to the in-house solver in terms of higher order methods for modeling energetic materials, multiple Level set tracking framework, coupled Level set & Volume of Fluid framework, improving the local mesh refinement, python readable energetic materials database.",
+      "publicationCount": 45,
+      "currentProjects": [
+        "Hypersonic Flow Modeling",
+        "Multiphase Flow Studies",
+        "Reactive Flow Engines"
+      ],
+      "tools": ["OpenFOAM", "Fluent", "Custom Solvers"],
+      "impact": [
+        "45 publications",
+        "Industry collaboration",
+        "Open-source tools"
+      ]
+    },
+    {
+      "title": "Computational Fluid Dynamics",
+      "subtitle": "Advanced methods for fluid flow simulation",
+      "icon": "🌊",
+      "overview": "CFD research focuses on developing next-gen algorithms for turbulence, multiphase, and reactive flows.",
+      "publicationCount": 45,
+      "currentProjects": [
+        "Hypersonic Flow Modeling",
+        "Multiphase Flow Studies",
+        "Reactive Flow Engines"
+      ],
+      "tools": ["OpenFOAM", "Fluent", "Custom Solvers"],
+      "impact": [
+        "45 publications",
+        "Industry collaboration",
+        "Open-source tools"
+      ]
+    },
+    {
+      "title": "Computational Fluid Dynamics",
+      "subtitle": "Advanced methods for fluid flow simulation",
+      "icon": "🌊",
+      "overview": "CFD research focuses on developing next-gen algorithms for turbulence, multiphase, and reactive flows.",
+      "publicationCount": 45,
+      "currentProjects": [
+        "Hypersonic Flow Modeling",
+        "Multiphase Flow Studies",
+        "Reactive Flow Engines"
+      ],
+      "tools": ["OpenFOAM", "Fluent", "Custom Solvers"],
+      "impact": [
+        "45 publications",
+        "Industry collaboration",
+        "Open-source tools"
+      ]
+    },
+    {
+      "title": "Computational Fluid Dynamics",
+      "subtitle": "Advanced methods for fluid flow simulation",
+      "icon": "🌊",
+      "overview": "CFD research focuses on developing next-gen algorithms for turbulence, multiphase, and reactive flows.",
+      "publicationCount": 45,
+      "currentProjects": [
+        "Hypersonic Flow Modeling",
+        "Multiphase Flow Studies",
+        "Reactive Flow Engines"
+      ],
+      "tools": ["OpenFOAM", "Fluent", "Custom Solvers"],
+      "impact": [
+        "45 publications",
+        "Industry collaboration",
+        "Open-source tools"
+      ]
+    }
+  ],
+  "Post Doctoral Researcher": [
+    {
+      "title": "Autonomous Vehicle Research",
+      "subtitle": "Navigation, sensing, and control systems",
+      "icon": "🚗",
+      "overview": "Graduate researchers work on sensors, control algorithms, and real-time processing for AVs.",
+      "publicationCount": 20,
+      "currentProjects": [
+        "LIDAR Sensor Fusion",
+        "Path Planning Algorithms",
+        "Real-Time Obstacle Detection"
+      ],
+      "tools": ["ROS", "MATLAB", "Python"],
+      "impact": [
+        "20 papers",
+        "University-Industry project",
+        "National conference awards"
+      ]
+    }
+  ],
+  "Graduate Student Researcher": [
+    {
+      "title": "Smart Irrigation Systems",
+      "subtitle": "IoT-based water management",
+      "icon": "💧",
+      "overview": "Undergraduates contribute to IoT-based irrigation using sensors, control valves, and mobile dashboards.",
+      "publicationCount": 10,
+      "currentProjects": [
+        "Soil Moisture Sensing",
+        "Water Pump Automation",
+        "Remote Monitoring App"
+      ],
+      "tools": ["Arduino", "NodeMCU", "Blynk"],
+      "impact": [
+        "Prototype tested on farms",
+        "Smart India Hackathon finalist",
+        "Featured in student expo"
+      ]
+    }
+  ],
+  "footer": {
+    "about": {
+      "title": "Computational Multiphysics Research Lab",
+      "description": "Advancing the frontiers of computational science through innovative multiphysics simulations and numerical methods. We develop cutting-edge algorithms for complex engineering and scientific applications.",
+      "social": {
+        "github": "#",
+        "twitter": "#",
+        "linkedin": "#"
+      }
+    },
+    "quick-links": [
+      "Research Areas",
+      "Publications",
+      "Open Source",
+      "Join Our Team"
+    ],
+    "contact": {
+      "address": "123 University Ave, Research Building",
+      "phone": "9789796025",
+      "email": "spk15031990@gmail.com"
+    },
+    "footer-note": "© 2025 Computational Multiphysics Research Lab. All rights reserved."
+  }
+}
