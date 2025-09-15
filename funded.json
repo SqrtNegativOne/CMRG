@@ -2,7 +2,10 @@
   "ribbontitle": "Research",
   "ribbondesc": "Advancing the frontiers of computational multiphysics through innovative research and cutting-edge numerical methods.",
   "Ongoing Research": [
-    {
+
+  ],
+  "Past Research": [
+        {
       "projectCode": "DOD/AFOSR (FA9550-19-1-0318)",
       "funding": "$7,500,000",
       "duration": "06/2019 ~ 05/2024",
@@ -48,9 +51,7 @@
         "Building material database of HMX, RDX, TNT, PETN, TATB",
         "Running mesoscale simulations and training PhD students"
       ]
-    }
-  ],
-  "Past Research": [
+    },
     {
       "projectCode": "DOD/AFRL/RWML, Eglin (FA8651-16-1-0005)",
       "duration": "05/2010 ~ Ongoing",

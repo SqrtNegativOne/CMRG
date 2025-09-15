@@ -1,9 +1,9 @@
 {
   "ribbon": {
-    "title": "Open Source Code",
-    "description": "The Computational Multiphysics Research Group (CoMPhys Lab) focuses on developing advanced computational models to study complex thermomechanical systems involving moving boundaries, multiphase interactions, and high strain-rate physics. Our research spans a broad range of applications—from bioinspired flight and cardiovascular flows to droplet evaporation, energetic material dynamics, and hypersonic reentry physics."
+    "title": "SCIMITAReX3D",
+    "description": "The Computational Multiphysics Research Group (CoMPhys Lab) focuses on developing advanced computational tools to study complex thermomechanical systems involving moving boundaries, multiphase interactions, and high strain-rate physics. Our research spans a broad range of applications—from bioinspired flight and cardiovascular flows to droplet evaporation, energetic material dynamics, and hypersonic reentry physics."
   },
-  "tagline": "Massively parallel implicit/explicit solid mechanics with block structured adaptive mesh refinement",
+  "tagline": "Exascale Hybrid Sharp/Diffuse Interface Solver for Multi-Material Dynamics",
   "buttons": [
     { "label": "Github", "icon": "fab fa-github", "link": "#" },
     { "label": "Docs", "icon": "fas fa-book", "link": "#" },
@@ -12,36 +12,8 @@
   ],
   "news": [
     {
-      "title": "Atomistic-informed phase field modeling of magnesium twin growth by disconnections – Our work appears in Acta Materialia",
-      "date": "January 8, 2025"
-    },
-    {
-      "title": "Mike Meier receives UCCS MAE PhD Student of the Year Award",
-      "date": "May 17, 2024"
-    },
-    {
-      "title": "Finite kinematics diffuse interface mechanics coupled to solidcomposite propellant deflagration – our work appears in CMAME",
-      "date": "May 14, 2024"
-    },
-    {
-      "title": "Grain boundary energy and faceting with lattice matching – our work appears in Acta Materialia",
-      "date": "May 14, 2024"
-    },
-    {
-      "title": "Congratulations Dr. Boyd and Dr. Meier!",
-      "date": "April 9, 2024"
-    },
-    {
-      "title": "Atomistic-informed phase field modeling of magnesium twin growth by disconnections – Our work appears in Acta Materialia",
-      "date": "January 8, 2025"
-    },
-    {
-      "title": "Mike Meier receives UCCS MAE PhD Student of the Year Award",
-      "date": "May 17, 2024"
-    },
-    {
-      "title": "Finite kinematics diffuse interface mechanics coupled to solidcomposite propellant deflagration – our work appears in CMAME",
-      "date": "May 14, 2024"
+      "title": "7-th Sprint Cycle of ScimitarX",
+      "date": "Sept 10, 2025"
     }
   ]
 }

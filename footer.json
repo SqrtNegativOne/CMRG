@@ -5,7 +5,7 @@
       "description": "We model complex flows and materials across scales and speeds, combining physics-based simulation and AI to solve challenges in aerospace, defense, energy, and bioinspired systems.",
       "social": {
         "github": "#",
-        "mail": "mailto:spk15031990@gmail.com",
+        "mail": "mailto:pkseshadri@iitm.ac.in",
         "linkedin": "https://www.linkedin.com/in/spradeepmahadeek/"
       }
     },
@@ -18,9 +18,9 @@
       {"name":"Contact Us","link":"contact.html"}
     ],
     "contact": {
-      "address": "Department. of Aerospace Engineering, IIT Madras, Chennai.",
-      "phone": "9789796025",
-      "email": "spk15031990@gmail.com"
+      "address": "Room No. 138, Department of Aerospace Engineering, IIT Madras, Chennai - 600036.",
+      "phone": "044-2257-4046",
+      "email": "pkseshadri@iitm.ac.in"
     },
     "footer-note": "© 2024 Computational Multiphysics Research Lab. All rights reserved."
   }

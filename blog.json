@@ -93,52 +93,8 @@
     }],
     "announcements":[
     {
-        "date": "July 1",
-        "message": "Our latest paper accepted in *Physics of Fluids*"
-    },
-    {
-        "date": "June 20",
-        "message": "Congratulations to Dr. Mehra on securing DST grant"
-    },
-    {
-        "date": "June 10",
-        "message": "New GPU cluster installed in lab for high-res simulations"
-    },
-    {
-        "date": "July 1",
-        "message": "Our latest paper accepted in *Physics of Fluids*"
-    },
-    {
-        "date": "June 20",
-        "message": "Congratulations to Dr. Mehra on securing DST grant"
-    },
-    {
-        "date": "June 10",
-        "message": "New GPU cluster installed in lab for high-res simulations"
-    },
-    {
-        "date": "July 1",
-        "message": "Our latest paper accepted in *Physics of Fluids*"
-    },
-    {
-        "date": "June 20",
-        "message": "Congratulations to Dr. Mehra on securing DST grant"
-    },
-    {
-        "date": "June 10",
-        "message": "New GPU cluster installed in lab for high-res simulations"
-    },
-    {
-        "date": "July 1",
-        "message": "Our latest paper accepted in *Physics of Fluids*"
-    },
-    {
-        "date": "June 20",
-        "message": "Congratulations to Dr. Mehra on securing DST grant"
-    },
-    {
-        "date": "June 10",
-        "message": "New GPU cluster installed in lab for high-res simulations"
+        "date": "Sept 12, 2025",
+        "message": "Invited Talk at Bharath University"
     }
     ],
     "recent-highlights": {
