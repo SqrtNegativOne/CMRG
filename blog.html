@@ -390,69 +390,147 @@
     <!-- loading header ends  -->
     <!-- loading blog  -->
     <script>
-      fetch("blog.json")
-        .then((res) => res.json())
-        .then((data) => {
-          document.querySelector(".ribbon-title").textContent = data.ribbontitle;
-          document.querySelector(".ribbon-desc").textContent = data.ribbondesc;
-          const blogList = document.getElementById("blog-list");
-          data.blogs.forEach((blog) => {
-            const preview =
-              blog.sections[0].content.split(". ").slice(0, 2).join(". ") + ".";
-            const blogCard = `
-              <div class="blog-card">
-                <img src="${blog.image}" alt="Blog ${blog.id}" />
-                <div class="blog-content">
-                  <h3 class="blog-title">${blog.title}</h3>
-                  <p class="blog-meta">By Researcher | 2025</p>
-                  <p class="blog-description">${preview}</p>
-                  <a href="singleblog.html?id=${blog.id}" class="read-more">Read More →</a>
-                </div>
-              </div>
-            `;
-            blogList.innerHTML += blogCard;
-          });
-          const container = document.getElementById('labNewsSection');
-          data.announcements.forEach(item => {
-            const newsDiv = document.createElement('div');
-            newsDiv.className = 'news-item';
-            const newsPara = document.createElement('p');
-            newsPara.innerHTML = `<strong>${item.date}:</strong> ${item.message}`;
-            newsDiv.appendChild(newsPara);
-            container.appendChild(newsDiv);
-          });
+      // fetch("blog.json")
+      //   .then((res) => res.json())
+      //   .then((data) => {
+      //     document.querySelector(".ribbon-title").textContent = data.ribbontitle;
+      //     document.querySelector(".ribbon-desc").textContent = data.ribbondesc;
+      //     const blogList = document.getElementById("blog-list");
+      //     data.blogs.forEach((blog) => {
+      //       const preview =
+      //         blog.sections[0].content.split(". ").slice(0, 2).join(". ") + ".";
+      //       const blogCard = `
+      //         <div class="blog-card">
+      //           <img src="${blog.image}" alt="Blog ${blog.id}" />
+      //           <div class="blog-content">
+      //             <h3 class="blog-title">${blog.title}</h3>
+      //             <p class="blog-meta">By Researcher | 2025</p>
+      //             <p class="blog-description">${preview}</p>
+      //             <a href="singleblog.html?id=${blog.id}" class="read-more">Read More →</a>
+      //           </div>
+      //         </div>
+      //       `;
+      //       blogList.innerHTML += blogCard;
+      //     });
+      //     const container = document.getElementById('labNewsSection');
+      //     data.announcements.forEach(item => {
+      //       const newsDiv = document.createElement('div');
+      //       newsDiv.className = 'news-item';
+      //       const newsPara = document.createElement('p');
+      //       newsPara.innerHTML = `<strong>${item.date}:</strong> ${item.message}`;
+      //       newsDiv.appendChild(newsPara);
+      //       container.appendChild(newsDiv);
+      //     });
 
-        const recentHighlightData = data["recent-highlights"];
-          // Set section title and subtitle
-          document.querySelector(".recent-section-title").textContent = recentHighlightData["recent-section-title"];
-          document.querySelector(".recent-section-subtitle").textContent = recentHighlightData["recent-section-subtitle"];
-          // Render recent highlight cards
-          const highlightCards = document.querySelector(".recent-highlight-cards");
-          highlightCards.innerHTML = "";
-          recentHighlightData.cards.forEach((highlight) => {
-            const div = document.createElement("div");
-            div.className = "recent-highlight-card";
-            const recentauthor = highlight["recent-authors"];
-            div.innerHTML = `
-                <div class="recent-card-content">
-                  <span class="recent-badge">${highlight["recent-badge"]}</span>
-                  <h3 class="recent-title">${highlight["recent-title"]}</h3>
-                  <p class="recent-authors">${recentauthor.replace(
-                  "Seshadri, P. K",
-                  `<span style='color: #d63384; font-weight: bold;'>Seshadri, P. K</span>`
-                )}</p>
-                  <p class="recent-journal">${highlight["recent-journal"]}</p>
-                  <p class="recent-description">${highlight["recent-description"]}</p>
-                </div>
-                <div class="recent-card-footer">
-                  <a href="#" class="recent-citations">${highlight["recent-citations"]}</a>
-                  <a href="${highlight["recent-link"]}" class="recent-read-more"">Read More</a>
-                </div>
-              `;
-            highlightCards.appendChild(div);
-          });
+      //   const recentHighlightData = data["recent-highlights"];
+      //     // Set section title and subtitle
+      //     document.querySelector(".recent-section-title").textContent = recentHighlightData["recent-section-title"];
+      //     document.querySelector(".recent-section-subtitle").textContent = recentHighlightData["recent-section-subtitle"];
+      //     // Render recent highlight cards
+      //     const highlightCards = document.querySelector(".recent-highlight-cards");
+      //     highlightCards.innerHTML = "";
+      //     recentHighlightData.cards.forEach((highlight) => {
+      //       const div = document.createElement("div");
+      //       div.className = "recent-highlight-card";
+      //       const recentauthor = highlight["recent-authors"];
+      //       div.innerHTML = `
+      //           <div class="recent-card-content">
+      //             <span class="recent-badge">${highlight["recent-badge"]}</span>
+      //             <h3 class="recent-title">${highlight["recent-title"]}</h3>
+      //             <p class="recent-authors">${recentauthor.replace(
+      //             "Seshadri, P. K",
+      //             `<span style='color: #d63384; font-weight: bold;'>Seshadri, P. K</span>`
+      //           )}</p>
+      //             <p class="recent-journal">${highlight["recent-journal"]}</p>
+      //             <p class="recent-description">${highlight["recent-description"]}</p>
+      //           </div>
+      //           <div class="recent-card-footer">
+      //             <a href="#" class="recent-citations">${highlight["recent-citations"]}</a>
+      //             <a href="${highlight["recent-link"]}" class="recent-read-more"">Read More</a>
+      //           </div>
+      //         `;
+      //       highlightCards.appendChild(div);
+      //     });
           
-        });
+      //   });
+      fetch("blog.json")
+  .then((res) => res.json())
+  .then((data) => {
+    document.querySelector(".ribbon-title").textContent = data.ribbontitle;
+    document.querySelector(".ribbon-desc").textContent = data.ribbondesc;
+
+    const blogList = document.getElementById("blog-list");
+
+    data.blogs.forEach((blog) => {
+      const preview =
+        blog.sections[0].content.split(". ").slice(0, 2).join(". ") + ".";
+
+      // Handle single vs multiple images
+      let imgSrc = "";
+      if (Array.isArray(blog.image)) {
+        imgSrc = blog.image.length > 0 ? blog.image[0] : "placeholder.jpg";
+      } else {
+        imgSrc = blog.image || "placeholder.jpg";
+      }
+
+      const blogCard = `
+        <div class="blog-card">
+          <img src="${imgSrc}" alt="Blog ${blog.id}" />
+          <div class="blog-content">
+            <h3 class="blog-title">${blog.title}</h3>
+            <p class="blog-meta">By Researcher | 2025</p>
+            <p class="blog-description">${preview}</p>
+            <a href="singleblog.html?id=${blog.id}" class="read-more">Read More →</a>
+          </div>
+        </div>
+      `;
+      blogList.innerHTML += blogCard;
+    });
+
+    // Announcements
+    const container = document.getElementById("labNewsSection");
+    data.announcements.forEach((item) => {
+      const newsDiv = document.createElement("div");
+      newsDiv.className = "news-item";
+      const newsPara = document.createElement("p");
+      newsPara.innerHTML = `<strong>${item.date}:</strong> ${item.message}`;
+      newsDiv.appendChild(newsPara);
+      container.appendChild(newsDiv);
+    });
+
+    // Recent highlights
+    const recentHighlightData = data["recent-highlights"];
+    document.querySelector(".recent-section-title").textContent =
+      recentHighlightData["recent-section-title"];
+    document.querySelector(".recent-section-subtitle").textContent =
+      recentHighlightData["recent-section-subtitle"];
+
+    const highlightCards = document.querySelector(".recent-highlight-cards");
+    highlightCards.innerHTML = "";
+    recentHighlightData.cards.forEach((highlight) => {
+      const div = document.createElement("div");
+      div.className = "recent-highlight-card";
+      const recentauthor = highlight["recent-authors"];
+      div.innerHTML = `
+        <div class="recent-card-content">
+          <span class="recent-badge">${highlight["recent-badge"]}</span>
+          <h3 class="recent-title">${highlight["recent-title"]}</h3>
+          <p class="recent-authors">${recentauthor.replace(
+            "Seshadri, P. K",
+            `<span style='color: #d63384; font-weight: bold;'>Seshadri, P. K</span>`
+          )}</p>
+          <p class="recent-journal">${highlight["recent-journal"]}</p>
+          <p class="recent-description">${highlight["recent-description"]}</p>
+        </div>
+        <div class="recent-card-footer">
+          <a href="#" class="recent-citations">${highlight["recent-citations"]}</a>
+          <a href="${highlight["recent-link"]}" class="recent-read-more">Read More</a>
+        </div>
+      `;
+      highlightCards.appendChild(div);
+    });
+  });
+
     </script>
     <!-- loading blog end  -->
     <!-- loading footer starts  -->

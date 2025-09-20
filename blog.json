@@ -5,7 +5,7 @@
     {
         "id": 1,
         "title": "From Dragonfly Wings to Hypersonic Shocks: My Journey into Computational Multiphysics",
-        "image": "images/Blog1.png",
+        "image": ["images/Blog1.png","images/Blog2.png","images/Blog1.png"],
         "sections": [
             {
                 "heading": "A Curious Beginning",

@@ -9,7 +9,7 @@ REQUIREMENT:
 	Core Sections:
 	--------------
 
-		Home
+		Home (Landing page, More Informative, Openings Details)
 		
 		About the Lab , Team
 
@@ -41,21 +41,21 @@ REQUIREMENT:
 		
 		5. https://jupyter-notebook.readthedocs.io/en/stable/notebook.html - Jupyter notebook
 		
+		6. publications reference page - https://chandanbose.com/journals.html
 
-publications reference page - https://chandanbose.com/journals.html
+		7. research reference page - resume shared in linked in
 
-research reference page - resume shared in linked in
-
-	Official github repo - https://github.com/PradeepKSeshadri/CMRG
+		8. Courses Notes - https://github.com/barbagroup/AeroPython/tree/master
 	
-	Courses Notes - https://github.com/barbagroup/AeroPython/tree/master
+		9. Official github repo - https://github.com/PradeepKSeshadri/CMRG
 	
-	Official website link - https://pradeepkseshadri.github.io/CMRG/
+		10.Official website link - https://pradeepkseshadri.github.io/CMRG/
 	
 NEW REQUIREMENT:
+================
 
-1. IIT LOGO
-2. GALLERY
-3. COURSES
-4. CODE
-5. ONGOING
+1. SEPERATE BLOG PAGE FOR INDIVIDUAL BLOG CONTENT WITH MULTIPLE IMAGES CAROUSAL [AUTOMATIC SLIDING ANIMATION]
+2. COURSE SECTION - EXPANDED FOR COMPLETE STUDENT ACCESS [INCLUDING NOTES, ASSIGNMENT TRACKER] EVENTS HAPPENED
+3. IIT LOGO INCLUDED IN HEADER
+4. NEW GALLERY PAGE - TO SHOWCASE ALL THE WORKSHOPS AND
+5. HOME LANDING PAGE - RECREATED TO LOOK MORE INFORMATIVE AND OPENINGS
