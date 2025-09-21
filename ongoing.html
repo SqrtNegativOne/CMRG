@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Research Projects by Role</title>
+  <title>CMRG | Research</title>
   <link rel="stylesheet" href="style.css">
-
+  <link
+      rel="icon"
+      type="image/x-icon"
+      href="images/iit madras without bg.png"
+    />
   <style>
     :root {
         --primary: #012149;
@@ -228,9 +232,11 @@
 <body>
 
   <!--Complete Header Starts-->
-
     <header>
-      <div class="logo"><img
+      <div class="logo" data-aos="fade-down"
+     data-aos-anchor-placement="top-center"
+      data-aos-duration="1500">
+        <img
           src="images/CMRG Logo White.png"
           alt="Computational Multiphysics Research Group"
           class="brand"
@@ -240,8 +246,6 @@
       <nav class="desktop-nav" data-aos="fade-down"
       data-aos-easing="ease-out"
       data-aos-duration="1500">
-        <img src="images/IIT MADRAS.png" class="iit" alt="iit mardras" /></div>
-      <nav class="desktop-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -250,11 +254,6 @@
             <div class="dropdown-content">
               <a href="ongoing.html">Ongoing</a>
               <a href="funded.html">Funded</a>
-<<<<<<< HEAD
-              <a href="ongoing.html">Research Papers</a>
-              <a href="fundedresearch.html">Funded Reserach</a>
-=======
->>>>>>> master
             </div>
           </li>
           <li class="dropdown">
@@ -281,18 +280,13 @@
     <nav class="sidebar" id="sidebar">
       <div class="close-icon" onclick="toggleSidebar()">×</div>
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li class="dropdown">
-          <div onclick="toggleDropdown(this)">Research ▾</div>
+          <div onclick="toggleDropdown(this)" class="active">Research ▾</div>
           <ul class="submenu">
-<<<<<<< HEAD
             <li><a href="ongoing.html">Ongoing</a></li>
-            <li><a href="funded.html">Funded</a></li>
-=======
-            <li><a href="past-projects.html">Past Projects</a></li>
-            <li><a href="ongoing.html">Ongoing Projects</a></li>
->>>>>>> master
+            <li><a href="funded.html">Funded</a></li>      
           </ul>
         </li>
         <li class="dropdown">
@@ -302,16 +296,26 @@
             <li><a href="conferences.html">Conferences</a></li>
           </ul>
         </li>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="code.html">Code</a></li>
         <li><a href="blog.html">Blog</a></li>
+        <li><a href="code.html">Code</a></li>
         <li><a href="openings.html">Openings</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    <script>
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("show");
+      }
+
+      function toggleDropdown(element) {
+        const parentLi = element.parentElement;
+        parentLi.classList.toggle("open");
+      }
+    </script>
     <!-- Complete Header Ends  -->
 
-    <div class="ribbon">
+<div class="ribbon">
       <div class="ribbon-content">
         <h1 class="ribbon-title"></h1>
         <p class="ribbon-desc"></p>
@@ -360,49 +364,69 @@
     </div>
   </template>
 
-  <!-- Complete footer starts  -->
-    <footer class="footer">
+  <footer class="footer">
       <div class="footer-container">
         <!-- Column 1: About -->
         <div class="footer-column about">
           <h3></h3>
           <p></p>
           <div class="social-icons">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
+
         <!-- Column 2: Links -->
         <div class="footer-column">
           <h4>Quick Links</h4>
           <ul></ul>
         </div>
+
         <!-- Column 3: Contact -->
         <div class="footer-column">
           <h4>Contact</h4>
-          <div style="display: flex; justify-content: center">
-            <ul class="contact-info"></ul>
-          </div>
+          <ul class="contact-info"></ul>
         </div>
       </div>
       <hr />
       <div class="footer-bottom"></div>
     </footer>
-    <!-- Complete footer ends  -->
-    <!-- loading header starts  -->
-    <script>
-      function toggleSidebar() {
-        const sidebar = document.getElementById("sidebar");
-        sidebar.classList.toggle("show");
+<script>
+      async function loadFooter() {
+        try {
+          const res = await fetch("about.json");
+          const data = await res.json();
+          const footer = data.footer;
+          document.querySelector(".about h3").textContent = footer.about.title;
+          document.querySelector(".about p").innerHTML =
+            footer.about.description;
+          const socialLinks = document.querySelectorAll(".social-icons a");
+          socialLinks[0].href = footer.about.social.github;
+          socialLinks[1].href = footer.about.social.twitter;
+          socialLinks[2].href = footer.about.social.linkedin;
+          const quickLinks = document.querySelector(".footer-column ul");
+          quickLinks.innerHTML = "";
+          footer["quick-links"].forEach((link) => {
+            const li = document.createElement("li");
+            li.innerHTML = `<a href="#">${link}</a>`;
+            quickLinks.appendChild(li);
+          });
+          const contact = footer.contact;
+          const contactInfo = document.querySelector(".contact-info");
+          contactInfo.innerHTML = `
+        <li><i class="fas fa-map-marker-alt"></i>${contact.address}</li>
+        <li><i class="fas fa-phone-alt"></i>${contact.phone}</li>
+        <li><i class="fas fa-envelope"></i>${contact.email}</li>
+      `;
+          document.querySelector(".footer-bottom").textContent =
+            footer["footer-note"];
+        } catch (err) {
+          console.error("Error loading publications data:", err);
+        }
       }
-      function toggleDropdown(element) {
-        const parentLi = element.parentElement;
-        parentLi.classList.toggle("open");
-      }
+      loadFooter();
     </script>
-    <!-- loading header ends  -->
-  
   <script>
     let researchData;
 
@@ -457,7 +481,37 @@
         document.querySelector(".ribbon-title").textContent = json.ribbontitle;
         document.querySelector(".ribbon-desc").textContent = json.ribbondesc;
         loadResearch("Assistant Research Scientist", document.querySelector(".button-group button"));
+        // Footer
+          document.getElementById("footer-title").textContent =
+            json.footer.about.title;
+          document.getElementById("footer-para").innerHTML =
+            json.footer.about.description;
+          const socialLinks = document.querySelectorAll(".social-icons a");
+          socialLinks[0].href = json.footer.about.social.github;
+          socialLinks[1].href = json.footer.about.social.twitter;
+          socialLinks[2].href = json.footer.about.social.linkedin;
+          const quickLinks = document.querySelector(".footer-column ul");
+          quickLinks.innerHTML = "";
+          json.footer["quick-links"].forEach((link) => {
+            console.log(link);
+            const li = document.createElement("li");
+            li.innerHTML = `<a href="#">${link}</a>`;
+            quickLinks.appendChild(li);
+          });
+          const contact = json.footer.contact;
+          const contactInfo = document.querySelector(".footer-contact-info");
+          contactInfo.innerHTML = `
+            <li><i class="fas fa-map-marker-alt"></i>${contact.address}</li>
+            <li><i class="fas fa-phone-alt"></i>${contact.phone}</li>
+            <li><i class="fas fa-envelope"></i>${contact.email}</li>
+          `;
+          document.querySelector(".footer-bottom").textContent =
+            json.footer["footer-note"];
       });
+      function toggleMenu() {
+        const menu = document.querySelector(".navListul");
+        menu.classList.toggle("active");
+      }
   </script>
   <!-- loading footer starts  -->
     <script>
@@ -519,3 +573,7 @@
     <!-- loading footer ends  -->
 </body>
 </html>
+
+
+
+
