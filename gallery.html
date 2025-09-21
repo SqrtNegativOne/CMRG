@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Workshop Gallery</title>
+  <link rel="stylesheet" href="gallery.css" />
+</head>
+<body>
+  <header>
+    <h1>Workshop Gallery</h1>
+  </header>
+
+  <main>
+    <!-- <div id="gallery" class="gallery"></div> -->
+    <div id="gallery" class="masonry"></div>
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" alt="Expanded view"/>
+    <div id="caption" class="caption"></div>
+  </div>
+
+  <script>
+    // Fetch gallery data from JSON
+fetch("gallery.json")
+  .then((res) => res.json())
+  .then((data) => {
+    const gallery = document.getElementById("gallery");
+
+    data.images.forEach((img) => {
+      const div = document.createElement("div");
+      div.classList.add("gallery-item");
+      div.innerHTML = `
+        <img src="${img.src}" alt="${img.caption}" loading="lazy"/>
+      `;
+      div.addEventListener("click", () => openLightbox(img.src, img.caption));
+      gallery.appendChild(div);
+    });
+  })
+  .catch((err) => console.error("Error loading gallery:", err));
+
+// Lightbox functionality
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const caption = document.getElementById("caption");
+const closeBtn = document.querySelector(".close");
+
+function openLightbox(src, text) {
+  lightbox.style.display = "block";
+  lightboxImg.src = src;
+  caption.textContent = text;
+}
+
+closeBtn.onclick = () => {
+  lightbox.style.display = "none";
+};
+
+// Close when clicking outside
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) {
+    lightbox.style.display = "none";
+  }
+});
+
+  </script>
+</body>
+</html>
