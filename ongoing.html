@@ -307,7 +307,6 @@
         const sidebar = document.getElementById("sidebar");
         sidebar.classList.toggle("show");
       }
-
       function toggleDropdown(element) {
         const parentLi = element.parentElement;
         parentLi.classList.toggle("open");
@@ -392,41 +391,6 @@
       <hr />
       <div class="footer-bottom"></div>
     </footer>
-<script>
-      async function loadFooter() {
-        try {
-          const res = await fetch("about.json");
-          const data = await res.json();
-          const footer = data.footer;
-          document.querySelector(".about h3").textContent = footer.about.title;
-          document.querySelector(".about p").innerHTML =
-            footer.about.description;
-          const socialLinks = document.querySelectorAll(".social-icons a");
-          socialLinks[0].href = footer.about.social.github;
-          socialLinks[1].href = footer.about.social.twitter;
-          socialLinks[2].href = footer.about.social.linkedin;
-          const quickLinks = document.querySelector(".footer-column ul");
-          quickLinks.innerHTML = "";
-          footer["quick-links"].forEach((link) => {
-            const li = document.createElement("li");
-            li.innerHTML = `<a href="#">${link}</a>`;
-            quickLinks.appendChild(li);
-          });
-          const contact = footer.contact;
-          const contactInfo = document.querySelector(".contact-info");
-          contactInfo.innerHTML = `
-        <li><i class="fas fa-map-marker-alt"></i>${contact.address}</li>
-        <li><i class="fas fa-phone-alt"></i>${contact.phone}</li>
-        <li><i class="fas fa-envelope"></i>${contact.email}</li>
-      `;
-          document.querySelector(".footer-bottom").textContent =
-            footer["footer-note"];
-        } catch (err) {
-          console.error("Error loading publications data:", err);
-        }
-      }
-      loadFooter();
-    </script>
   <script>
     let researchData;
 
@@ -481,32 +445,6 @@
         document.querySelector(".ribbon-title").textContent = json.ribbontitle;
         document.querySelector(".ribbon-desc").textContent = json.ribbondesc;
         loadResearch("Assistant Research Scientist", document.querySelector(".button-group button"));
-        // Footer
-          document.getElementById("footer-title").textContent =
-            json.footer.about.title;
-          document.getElementById("footer-para").innerHTML =
-            json.footer.about.description;
-          const socialLinks = document.querySelectorAll(".social-icons a");
-          socialLinks[0].href = json.footer.about.social.github;
-          socialLinks[1].href = json.footer.about.social.twitter;
-          socialLinks[2].href = json.footer.about.social.linkedin;
-          const quickLinks = document.querySelector(".footer-column ul");
-          quickLinks.innerHTML = "";
-          json.footer["quick-links"].forEach((link) => {
-            console.log(link);
-            const li = document.createElement("li");
-            li.innerHTML = `<a href="#">${link}</a>`;
-            quickLinks.appendChild(li);
-          });
-          const contact = json.footer.contact;
-          const contactInfo = document.querySelector(".footer-contact-info");
-          contactInfo.innerHTML = `
-            <li><i class="fas fa-map-marker-alt"></i>${contact.address}</li>
-            <li><i class="fas fa-phone-alt"></i>${contact.phone}</li>
-            <li><i class="fas fa-envelope"></i>${contact.email}</li>
-          `;
-          document.querySelector(".footer-bottom").textContent =
-            json.footer["footer-note"];
       });
       function toggleMenu() {
         const menu = document.querySelector(".navListul");
