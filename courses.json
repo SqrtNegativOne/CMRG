@@ -18,43 +18,61 @@
           "title": "Syllabus",
           "description": "Course structure, objectives, pedagogy and grading strategy.",
           "courseMeetingTimes": {
-            "lectures": "3 sessions / week, 2 hours / session",
-            "labs": "1 session / week, 2 hours / session"
+            "lectures": "Slot 'D' / 3 sessions / week, 50 mins / session",
+            "tutorial": "Slot 'D' / 1 session / week,  50 mins / session"
           },
           "learningObjectives": [
-            "Formulate and apply appropriate aerodynamic models to predict the forces on and performance of realistic three-dimensional configurations;",
-            "Assess the applicability of aerodynamic models to predict the forces on and performance of realistic three-dimensional configurations and estimate the errors resulting from their application;",
-            "Perform a computational and experimental aerodynamic analysis and design together with members of a team."
+             "Apply Helmholtz’s laws, Kelvin’s circulation theorem, and Biot–Savart law to analyze vortex-dominated flows and predict lift generation in airfoils;",
+             "Construct thin airfoil and lifting-line models to estimate aerodynamic characteristics such as lift, drag, and moment for two-dimensional and finite wings;",
+             "Evaluate the aerodynamic performance of airfoils, wings, and propellers using theoretical models and interpret experimental data in relation to design parameters;",
+             "Analyze the effect of wing geometry (aspect ratio, sweep, delta planform) and flow conditions on induced drag and flow behavior using classical inviscid theories;",
+             "Communicate the fundamental principles of lift generation and aircraft flight in simple, scientifically accurate language to non-specialist audiences;",
+             "Reflect on the role of an engineer by learning how to abstract real-world situations, formulate models and hypotheses, and appreciate the values of professionalism, responsibility, and meaningful problem-solving."
           ],
-          "commentOnModels": "An aerodynamic model is simply a method to estimate the aerodynamic performance...",
           "skills": [
             "Quantitative or Analytical Skills",
             "Qualitative or Conceptual Skills",
             "Integrative Skills"
           ],
           "weightage": [
-            { "activity": "Homework", "percentage": "20%" },
-            { "activity": "Exams (The Written and Oral Part of each Exam are 15% each)", "percentage": "60%" },
-            { "activity": "Project (Assignments are 10% Total and the Design Report is 10%)", "percentage": "20%" }
+            { "activity": "Homework & Tutorials (Weekly)", "percentage": "20%" },
+            { "activity": "Quiz 1 (August Last Week - Covers materials taught up to the point)", "percentage": "15%" },
+            { "activity": "Quiz 2 (October First Week - Covers materials taught between Quiz 1 and Quiz 2)", "percentage": "15%" },
+            { "activity": "End Semester Exam (Compulsory, covers entire course)", "percentage": "40%" },
+            { "activity": "Professionalism & Participation (Starts at full marks; deductions apply)", "percentage": "10%" }
           ],
           "grading": [
-            { "grade": "A", "marks": "90-100" },
-            { "grade": "B", "marks": "80-90" },
-            { "grade": "C", "marks": "70-80" },
-            { "grade": "D", "marks": "60-70" },
-            { "grade": "F", "marks": "0-60" }
+            { "grade": "S", "points": "10"},
+            { "grade": "A", "points": "9" },
+            { "grade": "B", "points": "8" },
+            { "grade": "C", "points": "7" },
+            { "grade": "D", "points": "6" },
+            { "grade": "E", "points": "5" },
+            { "grade": "F", "points": "0" }
           ]
         },
         {
           "title": "Calendar",
           "calendar": [
-            { "week": "1", "topics": ["Integral Equations, Lift and Drag"], "keyDates": ["Project assignment 1 out"] },
-            { "week": "2", "topics": ["Kinematics, Stress-strain, and Navier-Stokes Equations", "Wright Brothers Wind Tunnel Tests", "Aerodynamic Design of BWB - Lecture by Bob Liebeck, The Boeing Company"], "keyDates": ["Homework 1 due"] },
-            { "week": "3", "topics": ["2-D Potential Flow"], "keyDates": ["Homework 2 due", "Project assignment 1 due"] },
-            { "week": "4", "topics": ["2-D Panel Methods"], "keyDates": ["Homework 3 due", "Project assignment 2 out"] },
-            { "week": "5", "topics": ["Thin Airfoil Theory and Vortex Lattice Methods"], "keyDates": ["Homework 4 due", "Project assignment 2 due"] },
-            { "week": "6", "topics": ["Lifting Line and High Aspect Ratio Wings"], "keyDates": ["Homework 5 due", "Project assignment 3 out"] },
-            { "week": "7", "topics": ["Compressibility and Quasi 1D Flow"], "keyDates": ["Take-home written exam 1 out"] }
+            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 1", "topic": ["Introduction to Aerodynamics, Motivation, Course Info"] },
+            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 2", "topic": ["Historical Perspective, Course Schedule, Vector Algebra"] },
+            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 3", "topic": ["Vector Differential Calculus, In-class Problems"] },
+            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 4", "topic": ["Vector Integral Calculus, In-class Problems"] },
+            { "weekDate": "Aug 4  – Aug 8", "type": "Lecture 5", "topic": ["Continuum Hypothesis, Transport Properties", "Eulerian and Lagrangian Descriptions", "Control Volume and Material Derivatives"] },
+            { "weekDate": "Aug 4  – Aug 8", "type": "Lecture 6", "topic": ["Flow Visualization, Equations of Motion, Conservation Laws, Conditions and Consequences of Incompressibility"] },
+            { "weekDate": "Aug 4  – Aug 8", "type": "Lecture 7", "topic": ["Irrotational Incompressible Flow about 2D Bodies"] },
+            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 2", "topic": ["Historical Perspective, Course Schedule, Vector Algebra"] },
+            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 2", "topic": ["Historical Perspective, Course Schedule, Vector Algebra"] },
+            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 2", "topic": ["Historical Perspective, Course Schedule, Vector Algebra"] },
+            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 2", "topic": ["Historical Perspective, Course Schedule, Vector Algebra"] },
+            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 2", "topic": ["Historical Perspective, Course Schedule, Vector Algebra"] },
+            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 2", "topic": ["Historical Perspective, Course Schedule, Vector Algebra"] },
+            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 2", "topic": ["Historical Perspective, Course Schedule, Vector Algebra"] },
+            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 2", "topic": ["Historical Perspective, Course Schedule, Vector Algebra"] },
+            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 2", "topic": ["Historical Perspective, Course Schedule, Vector Algebra"] },
+            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 2", "topic": ["Historical Perspective, Course Schedule, Vector Algebra"] },
+            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 2", "topic": ["Historical Perspective, Course Schedule, Vector Algebra"] },
+            { "weekDate": "Jul 28 – Aug 1", "type": "Lecture 2", "topic": ["Historical Perspective, Course Schedule, Vector Algebra"] }
           ]
         },
         {

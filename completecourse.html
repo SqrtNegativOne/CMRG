@@ -595,7 +595,7 @@
             <p><strong>Lectures:</strong> ${
               mod.courseMeetingTimes?.lectures || "-"
             }</p>
-            <p><strong>Labs:</strong> ${mod.courseMeetingTimes?.labs || "-"}</p>
+            <p><strong>Tutorial:</strong> ${mod.courseMeetingTimes?.tutorial || "-"}</p>
           </section>
           <section><h2>Learning Objectives</h2>
             <ul>${(mod.learningObjectives || [])
@@ -622,10 +622,10 @@
           }
           ${
             mod.grading?.length
-              ? `<section><h3>Grade Breakdown</h3><table><thead><tr><th>Grade</th><th>Marks</th></tr></thead><tbody>${mod.grading
+              ? `<section><h3>Grade Breakdown</h3><table><thead><tr><th>Grade</th><th>Points</th></tr></thead><tbody>${mod.grading
                   .map(
                     (g) =>
-                      `<tr><td data-label="Grade">${g.grade}</td><td data-label="Marks">${g.marks}</td></tr>`
+                      `<tr><td data-label="Grade">${g.grade}</td><td data-label="Points">${g.points}</td></tr>`
                   )
                   .join("")}</tbody></table></section>`
               : ""
@@ -634,28 +634,39 @@
         },
 
         calendar(mod) {
-          if (!mod.calendar) {
-            return `<div class="mod-content"><h1>${mod.title}</h1><p style="color:#666">No calendar details provided for this module.</p></div>`;
-          }
-          const rows = mod.calendar
-            .map(
-              (r) =>
-                `<tr><td data-label="Week">${
-                  r.week
-                }</td><td data-label="Topics">${(r.topics || []).join(
-                  "<br>"
-                )}</td><td data-label="Key Dates">${(r.keyDates || []).join(
-                  "<br>"
-                )}</td></tr>`
-            )
-            .join("");
-          return `<div class="mod-content"><h1>${
-            mod.title
-          }</h1><hr style="margin-top:15px;margin-left:0px">${
-            mod.description ? `<p>${mod.description}</p>` : ""
-          }<table><thead><tr><th>Week</th><th>Topics</th><th>Key Dates</th></tr></thead><tbody>${rows}</tbody></table></div>`;
-        },
+         if (!mod.calendar) {
+         return `<div class="mod-content"><h1>${mod.title}</h1><p style="color:#666">No calendar details provided for this module.</p></div>`;
+         }
+        const rows = mod.calendar
+        .map(
+            (r, index) =>
+            `<tr>
+             <td data-label="S.No">${index + 1}</td>
+             <td data-label="Week Date">${r.weekDate || ""}</td>
+             <td data-label="Type">${r.type || ""}</td>
+             <td data-label="Topic">${(r.topic || []).join("<br>")}</td>
+             </tr>`
+           )
+        .join("");
 
+        return `<div class="mod-content">
+          <h1>${mod.title}</h1>
+          <hr style="margin-top:15px;margin-left:0px">
+          ${mod.description ? `<p>${mod.description}</p>` : ""}
+          <table>
+          <thead>
+          <tr>
+            <th>S.No</th>
+            <th>Week Date</th>
+            <th>Type</th>
+            <th>Topic</th>
+          </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+          </table>
+          </div>`;
+        },
+        
         readings(mod) {
           const rec = mod.books?.recommended
             ? `<h3>Recommended</h3><p>${
