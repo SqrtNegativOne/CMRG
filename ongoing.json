@@ -1,117 +1,143 @@
 { 
   "ribbontitle":"Research",
   "ribbondesc":"Advancing the frontiers of computational multiphysics through innovative research and cutting-edge numerical methods.",
-  "Assistant Research Scientist": [
+  "High-Performance Computing & Solver Development": [
     {
-      "title": "Development of Second",
-      "subtitle": "Development of Second Generation of Reactive Hydrocode SCIMITAR3Dv2.0",
-      "icon": "🌊",
-      "overview": "SCIMITAR3D is a sharp interface Cartesian grid-based reactive multiphase, multi-material hydrocode that is in development for past 20 years, to solve high speed impact, collision, penetration, and fragmentation problems. I am one of the key developers of second-generation version of SCIMITAR3D contributing to significant new capabilities to the in-house solver in terms of higher order methods for modeling energetic materials, multiple Level set tracking framework, coupled Level set & Volume of Fluid framework, improving the local mesh refinement, python readable energetic materials database.",
-      "publicationCount": 45,
+      "title": "High-Performance Computing & Solver Development",
+      "subtitle": "Adaptive, Scalable, and Multiphysics-Ready",
+      "icon": "⚡",
+      "overview": "Core lab effort: developing exascale-ready solvers built on Adaptive Mesh Refinement (AMR) and a Hybrid Sharp–Diffuse Interface Framework. These solver technologies underpin our shock hydrocodes, all-speed CFD, and multiscale couplers.",
+      "publicationCount": 0,
       "currentProjects": [
-        "Hypersonic Flow Modeling",
-        "Multiphase Flow Studies",
-        "Reactive Flow Engines"
+        "AMR-enabled hydrocodes and shock solvers",
+        "Density-based all-speed solver framework with low-Mach preconditioning",
+        "Hybrid Sharp–Diffuse Interface methods integrated with AMR"
       ],
-      "tools": ["OpenFOAM", "Fluent", "Custom Solvers"],
+      "tools": ["AMReX", "SCIMITAR3DeX", "Custom MPI/OpenMP codes"],
       "impact": [
-        "45 publications",
-        "Industry collaboration",
-        "Open-source tools"
+        "Exascale-ready implementations for large HPC centers",
+        "Unified solver frameworks that span Mach regimes and multiphase problems",
+        "Reusable libraries and software components for group projects"
       ]
     },
     {
-      "title": "Computational Fluid Dynamics",
-      "subtitle": "Advanced methods for fluid flow simulation",
+      "title": "In-House Multi-Material Eulerian Hydrocode",
+      "subtitle": "High-Strain-Rate Physics and Shock Dynamics",
       "icon": "🌊",
-      "overview": "CFD research focuses on developing next-gen algorithms for turbulence, multiphase, and reactive flows.",
-      "publicationCount": 45,
+      "overview": "Scalable multi-material Eulerian hydrocode for shock propagation, impact and fragmentation problems. Designed to resolve sharp features while remaining robust in mixed-material zones using the hybrid interface approach.",
+      "publicationCount": 0,
       "currentProjects": [
-        "Hypersonic Flow Modeling",
-        "Multiphase Flow Studies",
-        "Reactive Flow Engines"
+        "Modeling shock initiation in energetic materials",
+        "Impact response of layered protective structures",
+        "High-order methods and AMR for shock-focused multiphysics"
       ],
-      "tools": ["OpenFOAM", "Fluent", "Custom Solvers"],
+      "tools": ["AMReX", "Alamo", "SCIMITAR3DeX"],
       "impact": [
-        "45 publications",
-        "Industry collaboration",
-        "Open-source tools"
-      ]
-    },
-    {
-      "title": "Computational Fluid Dynamics",
-      "subtitle": "Advanced methods for fluid flow simulation",
-      "icon": "🌊",
-      "overview": "CFD research focuses on developing next-gen algorithms for turbulence, multiphase, and reactive flows.",
-      "publicationCount": 45,
-      "currentProjects": [
-        "Hypersonic Flow Modeling",
-        "Multiphase Flow Studies",
-        "Reactive Flow Engines"
-      ],
-      "tools": ["OpenFOAM", "Fluent", "Custom Solvers"],
-      "impact": [
-        "45 publications",
-        "Industry collaboration",
-        "Open-source tools"
-      ]
-    },
-    {
-      "title": "Computational Fluid Dynamics",
-      "subtitle": "Advanced methods for fluid flow simulation",
-      "icon": "🌊",
-      "overview": "CFD research focuses on developing next-gen algorithms for turbulence, multiphase, and reactive flows.",
-      "publicationCount": 45,
-      "currentProjects": [
-        "Hypersonic Flow Modeling",
-        "Multiphase Flow Studies",
-        "Reactive Flow Engines"
-      ],
-      "tools": ["OpenFOAM", "Fluent", "Custom Solvers"],
-      "impact": [
-        "45 publications",
-        "Industry collaboration",
-        "Open-source tools"
+        "Accurate prediction of shock–material interactions",
+        "Improved designs for protective systems and planetary entry models",
+        "Bridging experiments and simulations for validation"
       ]
     }
   ],
-  "Post Doctoral Researcher": [
+
+  "Energetic Materials & Reactive Systems": [
     {
-      "title": "Autonomous Vehicle Research",
-      "subtitle": "Navigation, sensing, and control systems",
-      "icon": "🚗",
-      "overview": "Graduate researchers work on sensors, control algorithms, and real-time processing for AVs.",
-      "publicationCount": 20,
+      "title": "Energetic Materials & Reactive Systems",
+      "subtitle": "Initiation, Hot-Spot Physics, and Multiscale Reactivity",
+      "icon": "🔥",
+      "overview": "Multiscale, multiphysics study of energetic materials from atomistic chemistry to continuum-scale initiation and run-to-detonation behavior. We combine DFT, MD, KMC and continuum reactive flow models for predictive capabilities.",
+      "publicationCount": 0,
       "currentProjects": [
-        "LIDAR Sensor Fusion",
-        "Path Planning Algorithms",
-        "Real-Time Obstacle Detection"
+        "Hot-spot formation and growth in heterogeneous energetic materials",
+        "Reactive burn models coupled to hydrocodes",
+        "Multiscale parameter passing: DFT → MD → continuum"
       ],
-      "tools": ["ROS", "MATLAB", "Python"],
+      "tools": ["LAMMPS", "DFT Codes", "Kinetic Monte Carlo", "Custom reactive solvers"],
       "impact": [
-        "20 papers",
-        "University-Industry project",
-        "National conference awards"
+        "Mechanistic insight into initiation and sensitivity",
+        "Improved constitutive/reaction models for engineering simulations",
+        "Data-driven parameter calibration linking experiments and simulation"
+      ]
+    },
+    {
+      "title": "Reactive Multiscale Couplers",
+      "subtitle": "DFT-to-Continuum Workflows",
+      "icon": "🔬",
+      "overview": "Workflows that extract reaction pathways and rates from atomistic simulations and feed them into meso/continuum models for predictive reactive simulations under extreme loading.",
+      "publicationCount": 0,
+      "currentProjects": [
+        "Automated extraction of kinetics from DFT/MD",
+        "Kinetic Monte Carlo for mesoscale reaction networks",
+        "Uncertainty quantification for reactive model parameters"
+      ],
+      "tools": ["DFT Tools", "LAMMPS", "KMC frameworks", "Python workflow scripts"],
+      "impact": [
+        "Robust end-to-end reactive modeling chain",
+        "Reduced reliance on ad-hoc empirical parameters",
+        "Better predictive capability for energetic system design"
       ]
     }
   ],
-  "Graduate Student Researcher": [
+
+  "Impact-Resistant & Protective Materials": [
     {
-      "title": "Smart Irrigation Systems",
-      "subtitle": "IoT-based water management",
-      "icon": "💧",
-      "overview": "Undergraduates contribute to IoT-based irrigation using sensors, control valves, and mobile dashboards.",
-      "publicationCount": 10,
+      "title": "Impact-Resistant & Protective Materials",
+      "subtitle": "Multiscale Mechanics and Materials Design for Protection",
+      "icon": "🛡️",
+      "overview": "Design and simulation of materials and structures optimized for impact resistance — from microstructural tailoring to structural-scale response — using coupled multiscale mechanics and dynamic testing calibration.",
+      "publicationCount": 0,
       "currentProjects": [
-        "Soil Moisture Sensing",
-        "Water Pump Automation",
-        "Remote Monitoring App"
+        "Multiscale models for fiber-matrix composites under impact",
+        "Topology and microstructure optimization for energy absorption",
+        "Coupling experiments and simulations for validation"
       ],
-      "tools": ["Arduino", "NodeMCU", "Blynk"],
+      "tools": ["Finite Element Codes", "Multiscale Homogenization", "Custom hydrocodes"],
       "impact": [
-        "Prototype tested on farms",
-        "Smart India Hackathon finalist",
-        "Featured in student expo"
+        "Guides design of lighter, more effective protective systems",
+        "Translates microstructural design rules to engineering-scale performance",
+        "Supports defense and aerospace material qualification"
+      ]
+    }
+  ],
+
+  "Biophysical & Biomedical Flow Modeling": [
+    {
+      "title": "Biophysical & Biomedical Flow Modeling",
+      "subtitle": "Cardiovascular, Microfluidic, and Cellular-Scale Flows",
+      "icon": "🫀",
+      "overview": "Applying our all-speed solver technology and multiscale coupling to biofluids: cardiovascular flows, microfluidics, and transport in porous biological media. Emphasis on physiological fidelity and clinically relevant predictions.",
+      "publicationCount": 0,
+      "currentProjects": [
+        "Patient-specific cardiovascular flow simulations (low-Mach regime)",
+        "Microfluidic device modelling with interface-resolving methods",
+        "Transport and mixing of particulates/cells in complex geometries"
+      ],
+      "tools": ["All-Speed Solvers", "Image-based geometry workflows", "Particle tracking modules"],
+      "impact": [
+        "Supports translational bioengineering and device design",
+        "Bridges physiological measurements and predictive modelling",
+        "Enables quantitative hypotheses for experimental collaborators"
+      ]
+    }
+  ],
+
+  "Hypersonic & Reentry Physics": [
+    {
+      "title": "Hypersonic & Reentry Physics",
+      "subtitle": "Ablation, Aerothermochemistry, and Plasma–Material Interaction",
+      "icon": "🚀",
+      "overview": "Coupled study of high-enthalpy aerothermodynamics, surface ablation and chemistry, and plasma–material interactions encountered during hypersonic flight and planetary reentry.",
+      "publicationCount": 0,
+      "currentProjects": [
+        "Ablation and surface chemistry modelling for TPS materials",
+        "Aerothermochemical coupling in boundary layers at high enthalpy",
+        "Multiscale methods for gas-surface interaction kinetics"
+      ],
+      "tools": ["High-fidelity CFD", "DFT for surface reactions", "Coupled thermochemical solvers"],
+      "impact": [
+        "Improves predictive models for thermal protection systems",
+        "Informs material selection and design for extreme environments",
+        "Enables joint experiments and simulation campaigns with hypersonics groups"
       ]
     }
   ]

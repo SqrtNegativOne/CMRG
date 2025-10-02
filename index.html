@@ -24,9 +24,93 @@
       * {
         margin: 0px;
         padding: 0px;
+        box-sizing: border-box;
         font-family: "Segoe UI", sans-serif;
       }
-      .hero {
+      
+      
+      
+      @media (max-width: 760px) {
+        header { height:72px; padding:10px 18px; }
+        header .brand, header .iit { height:44px; }
+        
+        nav.desktop-nav ul { gap:12px; }
+        nav.desktop-nav ul li a { font-size:0.95rem; padding:8px 6px; }
+      }
+
+/* Background logos that appear/disappear on either side of center text */
+.hero {
+  position: relative; /* ensure absolute children are positioned to hero */
+}
+
+/* Make sure hero-content sits above the logos */
+.hero-content {
+  z-index: 100; /* higher than logos */
+}
+
+/* Background logo common rules */
+.bg-logo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  pointer-events: none;         /* don't block clicks */
+  z-index: 1;                   /* behind hero-content */
+         /* optional: helps logos blend softly with blue bg */
+  width: clamp(220px, 28vw, 680px); /* responsive sizing: tweak max (480px) as you like */
+  max-height: 68vh;             /* ensure it never exceeds viewport height */
+  transition: opacity 0.6s ease;
+}
+
+/* Left / Right placement and animation */
+.bg-logo.left  { left: 6%;  animation: verticalSlideLeft 14s linear infinite; }
+.bg-logo.right { right: 6%; animation: verticalSlideRight 14s linear infinite; animation-delay: 7s; }
+
+/* Keyframes for left logo (slide in from left, pulse, slide out) */
+@keyframes verticalSlideLeft {
+  0%   { opacity: 0; transform: translateY(-140%) scale(.98); }
+  10%  { opacity: 0.3; transform: translateY(-60%) scale(1.00); }
+  30%  { opacity: 0.28; transform: translateY(-10%) scale(1.02); }
+  60%  { opacity: 0.28; transform: translateY(20%)  scale(1.02); }
+  85%  { opacity: 0.3; transform: translateY(80%)  scale(1.00); }
+  100% { opacity: 0; transform: translateY(140%)  scale(.98); }
+}
+  10%  { opacity: 0.3; transform: translate(-6%, -50%) scale(1.00); }
+  35%  { opacity: 0.5; transform: translate(0%, -50%)  scale(1.02); }
+  65%  { opacity: 0.5; transform: translate(0%, -50%)  scale(1.02); }
+  90%  { opacity: 0.3; transform: translate(6%, -50%)  scale(1.00); }
+  100% { opacity: 0; transform: translate(18%, -50%)  scale(.96); }
+}
+
+/* Mirror movement for right logo */
+@keyframes verticalSlideRight {
+  0%   { opacity: 0; transform: translateY(-140%) scale(.98); }
+  10%  { opacity: 0.3; transform: translateY(-60%) scale(1.00); }
+  30%  { opacity: 0.28; transform: translateY(-10%) scale(1.02); }
+  60%  { opacity: 0.28; transform: translateY(20%)  scale(1.02); }
+  85%  { opacity: 0.3; transform: translateY(80%)  scale(1.00); }
+  100% { opacity: 0; transform: translateY(140%)  scale(.98); }
+}
+  10%  { opacity: 0.3; transform: translate(6%, -50%)  scale(1.00); }
+  35%  { opacity: 0.5; transform: translate(0%, -50%)  scale(1.02); }
+  65%  { opacity: 0.5; transform: translate(0%, -50%)  scale(1.02); }
+  90%  { opacity: 0.3; transform: translate(-6%, -50%) scale(1.00); }
+  100% { opacity: 0; transform: translate(-18%, -50%) scale(.96); }
+}
+
+/* Reduce intensity on small screens so logos don't dominate the view */
+@media (max-width: 760px) {
+  .bg-logo { width: clamp(140px, 28vw, 340px); opacity: 0.12; }
+  .bg-logo.left { left: 4%; }
+  .bg-logo.right { right: 4%; }
+}
+
+/* Accessibility: respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .bg-logo { animation: none !important; opacity: 0.3 !important; transform: translateY(-50%) scale(1) !important; }
+}
+
+.hero {
         height: 100vh;
         background: linear-gradient(90deg, #011733, #012a5e, #0048a5);
         display: flex;
@@ -34,22 +118,28 @@
         align-items: center;
         overflow: hidden;
         padding: 10px;
+        position: relative;
       }
+      /* ensure content is centered and doesn't overflow on small screens */
       .hero-content {
-        max-width: 700px;
+        max-width: 900px;
+        width: 100%;
+        padding: 0 20px;
         text-align: center;
+        z-index: 2;
+        margin: 0 auto;
       }
       .hero-content h2 {
-        font-size: 2.8rem;
+        font-size: 3rem;
         font-weight: 800;
         margin-bottom: 20px;
-        line-height: 1.2;
+        line-height: 1.1;
         color: var(--text-light);
         text-transform: uppercase;
       }
 
       .hero-content p {
-        font-size: 1rem;
+        font-size: 1.05rem;
         line-height: 1.7;
         margin-bottom: 30px;
         color: var(--text-light);
@@ -69,6 +159,7 @@
         max-width: 200px;
         z-index: 999;
         outline: none;
+        display: inline-block;
       }
 
       .btn:hover {
@@ -84,6 +175,7 @@
         height: 60px;
         background-color: transparent;
         border: 3px solid rgba(197, 197, 197, 0.8);
+        transform: rotate(45deg);
       }
       .box div:nth-child(1) {
         top: 25%;
@@ -145,13 +237,44 @@
           opacity: 1;
         }
       }
+
+      .scroll-buttons {
+        position: absolute;
+        bottom: 30px; /* appears near the bottom of the hero */
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 20px;
+        z-index: 3;
+      }
+
+     .scroll-btn {
+       background: rgba(255, 255, 255, 0.12);
+       color: white;
+       border: 1px solid rgba(255,255,255,0.25);
+       padding: 10px 18px;
+       border-radius: 25px;
+       text-decoration: none;
+       font-size: 0.95rem;
+       font-weight: 500;
+       transition: all 0.3s ease;
+       backdrop-filter: blur(4px);
+     }
+
+     .scroll-btn:hover {
+       background: rgba(255, 255, 255, 0.28);
+       color: var(--highlight);
+       border-color: var(--highlight);
+    }
+
+     html { scroll-behavior: smooth; }
+
       /* Complete Hero ends  */
       /* Complete why starts  */
       .why-choose-section {
         text-align: center;
         padding: 60px 20px;
         margin-top: 50px;
-        /* border:2px solid red; */
       }
 
       .why-choose-section h2 {
@@ -220,6 +343,9 @@
         }
         .card {
           width: 90%;
+        }
+        .hero-content h2 {
+          font-size: 1.8rem;
         }
       }
       /* Complete why ends  */
@@ -351,9 +477,9 @@
     <!-- aos  -->
     <!--Complete Header Starts-->
     <header>
-      <div class="logo" data-aos="fade-down"
+      <div class="logo"
      data-aos-anchor-placement="top-center"
-      data-aos-duration="1500">
+     >
         <img
           src="images/CMRG Logo White.png"
           alt="Computational Multiphysics Research Group"
@@ -361,9 +487,9 @@
         />
         <img src="images/IIT MADRAS.png" class="iit" alt="iit mardras" />
       </div>
-      <nav class="desktop-nav" data-aos="fade-down"
-      data-aos-easing="ease-out"
-      data-aos-duration="1500">
+      <nav class="desktop-nav"
+     
+     >
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -424,16 +550,20 @@
     <!-- Complete Header Ends  -->
     <!-- Complete hero starts  -->
     <section class="hero">
-      <div class="hero-content" data-aos="zoom-in-right"
-      data-aos-easing="ease-out"
-      data-aos-duration="1500">
+  <!-- Decorative background logos (appear/disappear left & right) -->
+  <img src="images/CMRG Logo White.png" alt="" class="bg-logo left" aria-hidden="true" />
+  <img src="images/IIT MADRAS.png" alt="" class="bg-logo right" aria-hidden="true" />
+
+      <div class="hero-content"
+     
+     >
         <h2></h2>
         <p></p>
         <div class="hero-button">
           <a href="" class="btn"></a>
         </div>
       </div>
-      <div class="box">
+      <div class="box" aria-hidden="true">
         <div></div>
         <div></div>
         <div></div>
@@ -444,6 +574,11 @@
         <div></div>
         <div></div>
         <div></div>
+      </div>
+      <!-- New scroll buttons -->
+      <div class="scroll-buttons" aria-hidden="true">
+      <a href="#why-choose-section" class="scroll-btn">Why Choose Our Lab</a>
+      <a href="#research-section" class="scroll-btn">Research Areas</a>
       </div>
     </section>
     <!-- Complete hero ends  -->
@@ -457,7 +592,7 @@
     </section>
     <!-- Complete why choose ends -->
     <!-- Complete research starts  -->
-    <section class="research-section">
+    <section class="research-section" id="research-section">
       <div class="research-section-container">
         <h2></h2>
         <p></p>

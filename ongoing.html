@@ -246,7 +246,9 @@
           class="brand"
         />
         <img src="images/IIT MADRAS.png" class="iit" alt="iit mardras" />
-      </div>
+      
+    
+    </div>
       <nav class="desktop-nav" data-aos="fade-down"
       data-aos-easing="ease-out"
       data-aos-duration="1500">
@@ -326,10 +328,14 @@
     </div>
 
   <div class="button-group">
-    <button class="active" onclick="loadResearch('Assistant Research Scientist', this)">Assistant Research Scientist</button>
-    <button onclick="loadResearch('Post Doctoral Researcher', this)">Post Doctoral Researcher</button>
-    <button onclick="loadResearch('Graduate Student Researcher', this)">Graduate Student Researcher</button>
-  </div>
+    <button class="active" onclick="loadResearch('High-Performance Computing & Solver Development', this)">High-Performance Computing & Solver Development</button>
+    <button onclick="loadResearch('Energetic Materials & Reactive Systems', this)">Energetic Materials & Reactive Systems</button>
+    <button onclick="loadResearch('Impact-Resistant & Protective Materials', this)">Impact-Resistant & Protective Materials</button>
+  
+    <button onclick="loadResearch('Biophysical & Biomedical Flow Modeling', this)">Biophysical & Biomedical Flow Modeling</button>
+    <button onclick="loadResearch('Hypersonic & Reentry Physics', this)">Hypersonic & Reentry Physics</button>
+
+    </div>
 
   <div id="projects-container"></div>
 
@@ -449,7 +455,7 @@
         researchData = json;
         document.querySelector(".ribbon-title").textContent = json.ribbontitle;
         document.querySelector(".ribbon-desc").textContent = json.ribbondesc;
-        loadResearch("Assistant Research Scientist", document.querySelector(".button-group button"));
+        loadResearch("High-Performance Computing & Solver Development", document.querySelector(".button-group button"));
       });
       function toggleMenu() {
         const menu = document.querySelector(".navListul");
