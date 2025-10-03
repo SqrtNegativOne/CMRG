@@ -136,10 +136,11 @@
       </div>
       <nav class="desktop-nav">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="blog.html">News</a></li>
+          <li><a href="about.html">People</a></li>
           <li class="dropdown">
-            <a class="active">Research</a>
+            <a>Research</a>
             <div class="dropdown-content">
               <a href="ongoing.html">Ongoing</a>
               <a href="funded.html">Funded</a>
@@ -152,10 +153,9 @@
               <a href="conferences.html">Conferences</a>
             </div>
           </li>
-          <li><a href="courses.html">Courses</a></li>
-          <li><a href="code.html">Code</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="openings.html">Opening</a></li>
+        <!-- <li><a href="courses.html">Courses</a></li> -->
+        <!-- <li><a href="code.html">Code</a></li> -->
+          <li><a href="openings.html">Positions</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -169,10 +169,11 @@
     <nav class="sidebar" id="sidebar">
       <div class="close-icon" onclick="toggleSidebar()">×</div>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li class="dropdown" class="active">
-          <div onclick="toggleDropdown(this)" class="active">Research ▾</div>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="blog.html">News</a></li>
+        <li><a href="about.html">People</a></li>
+        <li class="dropdown">
+          <div onclick="toggleDropdown(this)">Research ▾</div>
           <ul class="submenu">
             <li><a href="ongoing.html">Ongoing</a></li>
             <li><a href="funded.html">Funded</a></li>
@@ -185,10 +186,9 @@
             <li><a href="conferences.html">Conferences</a></li>
           </ul>
         </li>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="code.html">Code</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="openings.html">Openings</a></li>
+        <!-- <li><a href="courses.html">Courses</a></li> -->
+        <!-- <li><a href="code.html">Code</a></li> -->
+        <li><a href="openings.html">Positions</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -203,11 +203,11 @@
     <!-- Complete ribbon ends  -->
     <!-- Complete Research starts  -->
     <div class="button-group">
-      <button class="active" onclick="loadResearch('Ongoing Research', this)">
-        Ongoing Research
+      <button class="active" onclick="loadResearch('Ongoing Funded Research', this)">
+        Ongoing Funded Research
       </button>
-      <button onclick="loadResearch('Past Research', this)">
-        Past Research
+      <button onclick="loadResearch('Past Funded Research', this)">
+        Past Funded Research
       </button>
     </div>
     <div class="container" id="projectsContainer"></div>

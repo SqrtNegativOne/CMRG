@@ -1,6 +1,6 @@
 {
   "ribbon": {
-    "title": "Openings",
+    "title": "Positions",
     "description": "The Computational Multiphysics Research Group (CoMPhys Lab) focuses on developing advanced computational models to study complex thermomechanical systems involving moving boundaries, multiphase interactions, and high strain-rate physics. Our research spans a broad range of applications—from bioinspired flight and cardiovascular flows to droplet evaporation, energetic material dynamics, and hypersonic reentry physics."
   },
   "sections": [
@@ -22,37 +22,6 @@
     "🌐 Apply Online: https://research.iitm.ac.in/",
     "✉️ Contact: Interested candidates may write directly to pkseshadri@iitm.ac.in"
   ]
-   },
- {
-  "title": "Undergraduate Research Internships & Projects",
-  "emoji": "🧑‍🔬",
-  "points": [
-    "🛠️ Gain hands-on experience with computational tools and methods used in scientific research",
-    "🧩 Learn to approach problems systematically and strengthen logical reasoning",
-    "📖 Develop research discipline through literature study, careful documentation, and critical analysis"
-  ],
-  "info": [
-    "📧 Apply: Send your resume and a short statement of motivation (1 paragraph) to pkseshadri@iitm.ac.in"
-  ]
- },
- {
-  "title": "High School Research Exposure",
-  "emoji": "🌱",
-  "points": [
-    "☀️ 1-week summer bootcamps led by lab members",
-    "💻 Introduction to computational thinking and simple scientific simulations",
-    "🧩 Learn how physics, math, and computing come together to model real-world phenomena",
-    "🤔 Develop curiosity, logical reasoning, and confidence in exploring scientific questions"
-  ]
- },
- {
-  "title": "Application Process",
-  "emoji": "📝",
-  "points": [
-    "✉️ Send an email to pkseshadri@iitm.ac.in",
-    "🗂️ Subject line: “Application – [Position Type] – [Your Name]”",
-    "📎 Attach your CV, a short motivation note, and indicate your research area(s) of interest"
-  ]
-}
+   }
   ]
 }

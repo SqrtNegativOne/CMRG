@@ -1,10 +1,14 @@
 {
   "ribbontitle": "Research",
   "ribbondesc": "Advancing the frontiers of computational multiphysics through innovative research and cutting-edge numerical methods.",
-  "Ongoing Research": [
+  "Ongoing Funded Research": [
+    {
+      "projectCode": "Coming Soon",
+      "title": "Our young research group is actively developing proposals in energetic materials, HPC solver development and shock-induced aerobreakup and combustion. We are building a strong foundation for future projects and welcome enthusiastic students, collaborators, and partners to engage with us as we grow."
+    }
 
   ],
-  "Past Research": [
+  "Past Funded Research": [
         {
       "projectCode": "DOD/AFOSR (FA9550-19-1-0318)",
       "funding": "$7,500,000",
@@ -30,7 +34,6 @@
     },
     {
       "projectCode": "DOD/AFRL/RWML, Eglin (FA8651-16-1-0005)",
-      "duration": "05/2010 ~ Ongoing",
       "title": "Development of a Multiscale Computational Framework for High Speed Multimaterial Dynamics",
       "source": "U.S. Department of Defense, AFRL Munitions Directorate (AFRL/RWML)",
       "leadInvestigator": "PI: H.S. Udaykumar (University of Iowa)",
@@ -54,7 +57,6 @@
     },
     {
       "projectCode": "DOD/AFRL/RWML, Eglin (FA8651-16-1-0005)",
-      "duration": "05/2010 ~ Ongoing",
       "title": "Development of a Multiscale Computational Framework for High Speed Multimaterial Dynamics",
       "source": "U.S. Department of Defense, AFRL Munitions Directorate (AFRL/RWML)",
       "leadInvestigator": "PI: H.S. Udaykumar (University of Iowa)",
