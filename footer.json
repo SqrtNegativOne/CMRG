@@ -18,7 +18,8 @@
       {"name":"Contact Us","link":"contact.html"}
     ],
     "contact": {
-      "address": "Room No. 138, Department of Aerospace Engineering, IIT Madras, Chennai - 600036.",
+      "address": "Room No. 138, Department of Aerospace Engineering",
+      "address1": "IIT Madras, Chennai - 600036.",
       "phone": "044-2257-4046",
       "email": "pkseshadri@iitm.ac.in"
     },

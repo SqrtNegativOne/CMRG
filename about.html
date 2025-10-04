@@ -206,9 +206,9 @@
       </div>
       <nav class="desktop-nav">
          <ul>
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="blog.html">News</a></li>
-          <li><a href="about.html">People</a></li>
+          <li><a href="about.html" class="active">People</a></li>
           <li class="dropdown">
             <a>Research</a>
             <div class="dropdown-content">
@@ -239,9 +239,9 @@
     <nav class="sidebar" id="sidebar">
       <div class="close-icon" onclick="toggleSidebar()">×</div>
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="blog.html">News</a></li>
-        <li><a href="about.html">People</a></li>
+        <li><a href="about.html" class="active">People</a></li>
         <li class="dropdown">
           <div onclick="toggleDropdown(this)">Research ▾</div>
           <ul class="submenu">
@@ -480,6 +480,14 @@
                 <tr">
                   <td><i class="fas fa-map-marker-alt"></i></td>
                   <td style="padding-left: 10px;">${contact.address}</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <table>
+                <tr">
+                  <td><i class="fa-solid fa-city"></i></td>
+                  <td style="padding-left: 10px;">${contact.address1}</td>
                 </tr>
               </table>
             </li>

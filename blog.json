@@ -59,37 +59,6 @@
             "content": "These models—MES-IG, PARC, and later MISSEL (a semi-analytical closure)—now form the backbone of our surrogate-informed multi-scale framework. Each addresses the scale-bridging challenge from a different angle: low-dimensional regression, deep learning assimilation, and physics-based closure.Together, they enable predictive simulations that are faster, more generalizable, and grounded in both physics and data. This approach doesn’t just accelerate computations—it reshapes how we think about material modeling.By combining simulation, statistical learning, and physics constraints, we can now explore vast microstructural design spaces, assess uncertainty, and generate performance maps—tools that are vital not just for understanding, but for engineering safer and smarter energetic materials."
         }
         ]
-    },
-    {
-        "id": 1,
-        "title": "From Dragonfly Wings to Hypersonic Shocks: My Journey into Computational Multiphysics",
-        "image": "images/Blog1.png",
-        "sections": [
-            {
-                "heading": "A Curious Beginning",
-                "content": "It started with a question: how do dragonflies stay aloft with such ease? As an undergraduate, I found myself drawn to the mechanics of flight—not just of aircraft, but of insects. For my final-year project, I used a commercial CFD package to study the flapping trajectories of dragonfly wings. I wanted to understand what made one motion more efficient than another. It was a small step, but it opened the door to a much larger world."
-            },
-            {
-                "heading": "Master’s at IIT Kanpur",
-                "content": "At IIT Kanpur, during my Master’s, that curiosity turned into code. I built a two-dimensional Lattice Boltzmann solver from the ground up, embedding an Immersed Boundary Method to simulate insect flight. My focus was the clap-and-fling maneuver—where insect wings press together and fling apart to generate lift. To capture this motion, I combined Lagrangian interface tracking with a diffuse interface capturing approach. The result was a framework that could resolve leading-edge vortices and the delayed stall that nature exploits so effectively."
-            },
-            {
-                "heading": "PhD: Scaling the Challenge",
-                "content": "These early projects weren’t just academic exercises. They taught me how to translate complex physics into computation—how to build solvers that don’t just approximate but reveal. My PhD continued in this direction, but the scale and the stakes grew. Still at IIT Kanpur, I developed a sharp interface capturing method for simulating moving bodies with complex geometries in all-speed regimes. The goal was to handle realistic interfaces and capture sharp features. I embedded this into an in-house code."
-            },
-            {
-                "heading": "Postdoc: From Wings to Explosives",
-                "content": "When I moved to the University of Iowa for postdoctoral research, the focus shifted again—this time to energetic materials like HMX and RDX. They’re used in propulsion, defense, and impact scenarios where even nano-second time scales count. I joined a team building SCIMITAR3D, a next-generation multi-material hydrocode. My role was to make it faster, sharper, and more capable—able to simulate shocks, fragmentation, and chemical reactions with precision."
-            },
-            {
-                "heading": "Applications in Health and Beyond",
-                "content": "Along the way, I’ve also worked on problems beyond defense—like modeling the evaporation of virus-laden droplets during the COVID-19 pandemic. I built a level set-based drying model to understand how solute concentrations evolve over time. Even here, the same principles applied: multi-physics, interface dynamics, and computation that tells a story."
-            },
-            {
-                "heading": "Where We Are Now",
-                "content": "Now, through my research group, I’m continuing this work—building tools that bridge biology and ballistics, droplets and detonations. We are focused on understanding the physics of materials and flows in extreme conditions—whether it’s a high-speed impact, a shockwave traveling through a crystal, or a droplet drying on a surface. The domains may differ. The approach remains the same: careful modeling, strong physics, and an eye for the invisible forces shaping the world around us."
-            }
-        ]
     }],
     "announcements":[
     {

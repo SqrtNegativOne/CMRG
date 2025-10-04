@@ -56,7 +56,7 @@
       padding: 2rem;
     }
 
-    .research-card {
+    /* .research-card {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -70,7 +70,6 @@
     .card-left {
       flex: 1 1 60%;
       min-width: 280px;
-      /* border:2px solid red; */
     }
 
     .card-right {
@@ -79,7 +78,63 @@
       display: flex;
       flex-direction: column;
       gap: 2rem;
-    }
+    } */
+
+    .research-card {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  gap: 2rem;
+}
+
+/* New Image Section */
+.card-image {
+  flex: 1 1 25%;
+  min-width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.research-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.card-left {
+  flex: 1 1 40%;
+  min-width: 280px;
+}
+
+.card-right {
+  flex: 1 1 25%;
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .research-card {
+    flex-direction: column;
+  }
+  .card-image, .card-left, .card-right {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+  .research-img {
+    max-height: 250px;
+    object-fit: contain;
+  }
+}
+
 
     .title-area {
       display: flex;
@@ -189,6 +244,15 @@
       .card-right {
         flex: 1 1 100%;
       }
+      .button-group {
+        flex-direction: column;
+        align-items: stretch; /* buttons take full width */
+      }
+
+      .button-group button {
+        width: 100%;        /* each button full width */
+        text-align: center; /* center text inside */
+      }
     }
 
     @media (max-width: 468px) {
@@ -246,18 +310,16 @@
           class="brand"
         />
         <img src="images/IIT MADRAS.png" class="iit" alt="iit mardras" />
-      
-    
-    </div>
+      </div>
       <nav class="desktop-nav" data-aos="fade-down"
       data-aos-easing="ease-out"
       data-aos-duration="1500">
          <ul>
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="blog.html">News</a></li>
           <li><a href="about.html">People</a></li>
           <li class="dropdown">
-            <a>Research</a>
+            <a class="active">Research</a>
             <div class="dropdown-content">
               <a href="ongoing.html">Ongoing</a>
               <a href="funded.html">Funded</a>
@@ -286,11 +348,11 @@
     <nav class="sidebar" id="sidebar">
       <div class="close-icon" onclick="toggleSidebar()">×</div>
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="blog.html">News</a></li>
         <li><a href="about.html">People</a></li>
         <li class="dropdown">
-          <div onclick="toggleDropdown(this)">Research ▾</div>
+          <div onclick="toggleDropdown(this)" class="active">Research ▾</div>
           <ul class="submenu">
             <li><a href="ongoing.html">Ongoing</a></li>
             <li><a href="funded.html">Funded</a></li>
@@ -332,15 +394,56 @@
     <button class="active" onclick="loadResearch('High-Performance Computing & Solver Development', this)">High-Performance Computing & Solver Development</button>
     <button onclick="loadResearch('Energetic Materials & Reactive Systems', this)">Energetic Materials & Reactive Systems</button>
     <button onclick="loadResearch('Impact-Resistant & Protective Materials', this)">Impact-Resistant & Protective Materials</button>
-  
     <button onclick="loadResearch('Biophysical & Biomedical Flow Modeling', this)">Biophysical & Biomedical Flow Modeling</button>
     <button onclick="loadResearch('Hypersonic & Reentry Physics', this)">Hypersonic & Reentry Physics</button>
 
     </div>
 
   <div id="projects-container"></div>
+<template id="research-card-template">
+  <div class="research-card">
+    
+    <!-- Image Section -->
+    <div class="card-image">
+      <img src="" alt="Research Image" class="research-img" />
+    </div>
 
-  <template id="research-card-template">
+    <!-- Left Content -->
+    <div class="card-left">
+      <div class="title-area">
+        <div class="icon-square">🔬</div>
+        <div>
+          <h2 class="research-title">Title</h2>
+          <p class="subtitle">Subtitle</p>
+        </div>
+        <!-- <span class="badge publication-count">0 Publications</span> -->
+      </div>
+      <div class="section">
+        <h4>Overview</h4>
+        <p class="overview-text">Overview content</p>
+      </div>
+      <div class="section">
+        <h4>Current Projects</h4>
+        <ul class="projects-list"></ul>
+      </div>
+    </div>
+
+    <!-- Right Content -->
+    <div class="card-right">
+      <div class="section">
+        <h4>Tools & Software</h4>
+        <div class="tools-list"></div>
+      </div>
+      <div class="section impact-box">
+        <h4>Research Impact</h4>
+        <ul class="impact-list"></ul>
+      </div>
+    </div>
+
+  </div>
+</template>
+
+  <!-- <template id="research-card-template">
     <div class="research-card">
       <div class="card-left">
         <div class="title-area">
@@ -372,7 +475,7 @@
         </div>
       </div>
     </div>
-  </template>
+  </template> -->
   <!-- Complete footer starts  -->
     <footer class="footer">
       <div class="footer-container">
@@ -419,11 +522,13 @@
 
       list.forEach(item => {
         const clone = template.content.cloneNode(true);
+        clone.querySelector(".research-img").src = item.image;
+        clone.querySelector(".research-img").alt = item.imgtitle;
         clone.querySelector(".research-title").textContent = item.title;
         clone.querySelector(".subtitle").textContent = item.subtitle;
         clone.querySelector(".icon-square").textContent = item.icon;
         clone.querySelector(".overview-text").textContent = item.overview;
-        clone.querySelector(".publication-count").textContent = `${item.publicationCount} Publications`;
+        // clone.querySelector(".publication-count").textContent = `${item.publicationCount} Publications`;
 
         const projectList = clone.querySelector(".projects-list");
         item.currentProjects.forEach(p => {
@@ -495,6 +600,15 @@
                 </tr>
               </table>
             </li>
+            <li>
+              <table>
+                <tr">
+                  <td><i class="fa-solid fa-city"></i></td>
+                  <td style="padding-left: 10px;">${contact.address1}</td>
+                </tr>
+              </table>
+            </li>
+            <li>
             <li>
               <table>
                 <tr>

@@ -63,8 +63,8 @@
 }
 
 /* Left / Right placement and animation */
-.bg-logo.left  { left: 6%;  animation: verticalSlideLeft 14s linear infinite; }
-.bg-logo.right { right: 6%; animation: verticalSlideRight 14s linear infinite; animation-delay: 7s; }
+.bg-logo.left  { left: 6%;  animation: verticalSlideLeft 1s linear infinite; }
+.bg-logo.right { right: 6%; animation: verticalSlideRight 1s linear infinite; animation-delay: 7s; }
 
 /* Keyframes for left logo (slide in from left, pulse, slide out) */
 @keyframes verticalSlideLeft {
@@ -75,6 +75,7 @@
   85%  { opacity: 0.3; transform: translateY(80%)  scale(1.00); }
   100% { opacity: 0; transform: translateY(140%)  scale(.98); }
 }
+@keyframes verticalSlideRight {
   10%  { opacity: 0.3; transform: translate(-6%, -50%) scale(1.00); }
   35%  { opacity: 0.5; transform: translate(0%, -50%)  scale(1.02); }
   65%  { opacity: 0.5; transform: translate(0%, -50%)  scale(1.02); }
@@ -91,12 +92,13 @@
   85%  { opacity: 0.3; transform: translateY(80%)  scale(1.00); }
   100% { opacity: 0; transform: translateY(140%)  scale(.98); }
 }
+/* @keyframes verticalSlideRight{
   10%  { opacity: 0.3; transform: translate(6%, -50%)  scale(1.00); }
   35%  { opacity: 0.5; transform: translate(0%, -50%)  scale(1.02); }
   65%  { opacity: 0.5; transform: translate(0%, -50%)  scale(1.02); }
   90%  { opacity: 0.3; transform: translate(-6%, -50%) scale(1.00); }
   100% { opacity: 0; transform: translate(-18%, -50%) scale(.96); }
-}
+} */
 
 /* Reduce intensity on small screens so logos don't dominate the view */
 @media (max-width: 760px) {
@@ -176,6 +178,8 @@
         background-color: transparent;
         border: 3px solid rgba(197, 197, 197, 0.8);
         transform: rotate(45deg);
+        /* border:20px solid red; */
+
       }
       .box div:nth-child(1) {
         top: 25%;
@@ -441,7 +445,26 @@
         color: white;
         text-align: center;
         padding: 60px 20px;
+        position: relative;
+        overflow: hidden;  
+        box-shadow: 0px 2px 200px rgb(0, 20, 62)
       }
+
+      .join-section .box div {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        border: 3px solid rgba(255, 255, 255, 0.5); /* lighter border for contrast */
+        transform: rotate(45deg);
+        animation: animate 12s linear infinite;
+      }
+
+      .join-section .box div:nth-child(1) { top: 20%; left: 30%; animation-duration: 10s; }
+      .join-section .box div:nth-child(2) { top: 70%; left: 50%; animation-duration: 12s; }
+      .join-section .box div:nth-child(3) { top: 40%; left: 80%; animation-duration: 9s; }
+      .join-section .box div:nth-child(4) { top: 60%; left: 10%; animation-duration: 11s; }
+      .join-section .box div:nth-child(5) { top: 10%; left: 60%; animation-duration: 14s; }
 
       .join-section-container {
         max-width: 800px;
@@ -554,9 +577,7 @@
   <img src="images/CMRG Logo White.png" alt="" class="bg-logo left" aria-hidden="true" />
   <img src="images/IIT MADRAS.png" alt="" class="bg-logo right" aria-hidden="true" />
 
-      <div class="hero-content"
-     
-     >
+      <div class="hero-content">
         <h2></h2>
         <p></p>
         <div class="hero-button">
@@ -603,14 +624,29 @@
     <!-- Complete research ends  -->
     <!-- Complete join section starts  -->
     <section class="join-section">
-      <div class="join-section-container">
-        <h2></h2>
-        <p></p>
-        <div class="buttons">
-          <a href="" class="btn"></a>
-        </div>
+    <div class="join-section-container">
+      <h2></h2>
+      <p></p>
+      <div class="buttons">
+        <a href="" class="btn"></a>
       </div>
-    </section>
+    </div>
+
+    <!-- Floating animated boxes -->
+    <div class="box">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </section>
+
     <!-- Complete join section ends  -->
     <!-- Complete footer starts  -->
     <footer class="footer">
@@ -760,6 +796,15 @@
                 <tr">
                   <td><i class="fas fa-map-marker-alt"></i></td>
                   <td style="padding-left: 10px;">${contact.address}</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+            <li>
+              <table>
+                <tr">
+                  <td><i class="fa-solid fa-city"></i></td>
+                  <td style="padding-left: 10px;">${contact.address1}</td>
                 </tr>
               </table>
             </li>
