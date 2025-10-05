@@ -21,99 +21,96 @@
         --text-light: #f9fafb;
       }
       /* Complete Hero starts  */
-      * {
+     
+      /* * {
         margin: 0px;
         padding: 0px;
         box-sizing: border-box;
         font-family: "Segoe UI", sans-serif;
       }
-      
-      
-      
       @media (max-width: 760px) {
         header { height:72px; padding:10px 18px; }
         header .brand, header .iit { height:44px; }
         
         nav.desktop-nav ul { gap:12px; }
         nav.desktop-nav ul li a { font-size:0.95rem; padding:8px 6px; }
+      } */
+
+      /* Background logos that appear/disappear on either side of center text */
+      /* .hero {
+        position: relative;
+      } */
+
+      /* Make sure hero-content sits above the logos */
+      /* .hero-content {
+        z-index: 100;
+      } */
+
+      /* Background logo common rules */
+      /* .bg-logo {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0;
+        pointer-events: none;         
+        z-index: 1;                   
+        width: clamp(220px, 28vw, 680px); 
+        max-height: 68vh;             
+        transition: opacity 0.6s ease;
+      } */
+
+      /* Left / Right placement and animation */
+      /* .bg-logo.left  { left: 6%;  animation: verticalSlideLeft 1s linear infinite; }
+      .bg-logo.right { right: 6%; animation: verticalSlideRight 1s linear infinite; animation-delay: 7s; } */
+
+      /* Keyframes for left logo (slide in from left, pulse, slide out) 
+      @keyframes verticalSlideLeft {
+        0%   { opacity: 0; transform: translateY(-140%) scale(.98); }
+        10%  { opacity: 0.3; transform: translateY(-60%) scale(1.00); }
+        30%  { opacity: 0.28; transform: translateY(-10%) scale(1.02); }
+        60%  { opacity: 0.28; transform: translateY(20%)  scale(1.02); }
+        85%  { opacity: 0.3; transform: translateY(80%)  scale(1.00); }
+        100% { opacity: 0; transform: translateY(140%)  scale(.98); }
+      }
+      @keyframes verticalSlideRight {
+        10%  { opacity: 0.3; transform: translate(-6%, -50%) scale(1.00); }
+        35%  { opacity: 0.5; transform: translate(0%, -50%)  scale(1.02); }
+        65%  { opacity: 0.5; transform: translate(0%, -50%)  scale(1.02); }
+        90%  { opacity: 0.3; transform: translate(6%, -50%)  scale(1.00); }
+        100% { opacity: 0; transform: translate(18%, -50%)  scale(.96); }
+      }*/
+
+      /* Mirror movement for right logo */
+      /* @keyframes verticalSlideRight {
+        0%   { opacity: 0; transform: translateY(-140%) scale(.98); }
+        10%  { opacity: 0.3; transform: translateY(-60%) scale(1.00); }
+        30%  { opacity: 0.28; transform: translateY(-10%) scale(1.02); }
+        60%  { opacity: 0.28; transform: translateY(20%)  scale(1.02); }
+        85%  { opacity: 0.3; transform: translateY(80%)  scale(1.00); }
+        100% { opacity: 0; transform: translateY(140%)  scale(.98); }
+      } */
+      /* @keyframes verticalSlideRight{
+        10%  { opacity: 0.3; transform: translate(6%, -50%)  scale(1.00); }
+        35%  { opacity: 0.5; transform: translate(0%, -50%)  scale(1.02); }
+        65%  { opacity: 0.5; transform: translate(0%, -50%)  scale(1.02); }
+        90%  { opacity: 0.3; transform: translate(-6%, -50%) scale(1.00); }
+        100% { opacity: 0; transform: translate(-18%, -50%) scale(.96); }
+      } */
+
+      /* Reduce intensity on small screens so logos don't dominate the view */
+      /* @media (max-width: 760px) {
+        .bg-logo { width: clamp(140px, 28vw, 340px); opacity: 0.12; }
+        .bg-logo.left { left: 4%; }
+        .bg-logo.right { right: 4%; }
       }
 
-/* Background logos that appear/disappear on either side of center text */
-.hero {
-  position: relative; /* ensure absolute children are positioned to hero */
-}
+      /* Accessibility: respect users who prefer reduced motion */
+      /*@media (prefers-reduced-motion: reduce) {
+        .bg-logo { animation: none !important; opacity: 0.3 !important; transform: translateY(-50%) scale(1) !important; }
+      } */
 
-/* Make sure hero-content sits above the logos */
-.hero-content {
-  z-index: 100; /* higher than logos */
-}
-
-/* Background logo common rules */
-.bg-logo {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: 0;
-  pointer-events: none;         /* don't block clicks */
-  z-index: 1;                   /* behind hero-content */
-         /* optional: helps logos blend softly with blue bg */
-  width: clamp(220px, 28vw, 680px); /* responsive sizing: tweak max (480px) as you like */
-  max-height: 68vh;             /* ensure it never exceeds viewport height */
-  transition: opacity 0.6s ease;
-}
-
-/* Left / Right placement and animation */
-.bg-logo.left  { left: 6%;  animation: verticalSlideLeft 1s linear infinite; }
-.bg-logo.right { right: 6%; animation: verticalSlideRight 1s linear infinite; animation-delay: 7s; }
-
-/* Keyframes for left logo (slide in from left, pulse, slide out) */
-@keyframes verticalSlideLeft {
-  0%   { opacity: 0; transform: translateY(-140%) scale(.98); }
-  10%  { opacity: 0.3; transform: translateY(-60%) scale(1.00); }
-  30%  { opacity: 0.28; transform: translateY(-10%) scale(1.02); }
-  60%  { opacity: 0.28; transform: translateY(20%)  scale(1.02); }
-  85%  { opacity: 0.3; transform: translateY(80%)  scale(1.00); }
-  100% { opacity: 0; transform: translateY(140%)  scale(.98); }
-}
-@keyframes verticalSlideRight {
-  10%  { opacity: 0.3; transform: translate(-6%, -50%) scale(1.00); }
-  35%  { opacity: 0.5; transform: translate(0%, -50%)  scale(1.02); }
-  65%  { opacity: 0.5; transform: translate(0%, -50%)  scale(1.02); }
-  90%  { opacity: 0.3; transform: translate(6%, -50%)  scale(1.00); }
-  100% { opacity: 0; transform: translate(18%, -50%)  scale(.96); }
-}
-
-/* Mirror movement for right logo */
-@keyframes verticalSlideRight {
-  0%   { opacity: 0; transform: translateY(-140%) scale(.98); }
-  10%  { opacity: 0.3; transform: translateY(-60%) scale(1.00); }
-  30%  { opacity: 0.28; transform: translateY(-10%) scale(1.02); }
-  60%  { opacity: 0.28; transform: translateY(20%)  scale(1.02); }
-  85%  { opacity: 0.3; transform: translateY(80%)  scale(1.00); }
-  100% { opacity: 0; transform: translateY(140%)  scale(.98); }
-}
-/* @keyframes verticalSlideRight{
-  10%  { opacity: 0.3; transform: translate(6%, -50%)  scale(1.00); }
-  35%  { opacity: 0.5; transform: translate(0%, -50%)  scale(1.02); }
-  65%  { opacity: 0.5; transform: translate(0%, -50%)  scale(1.02); }
-  90%  { opacity: 0.3; transform: translate(-6%, -50%) scale(1.00); }
-  100% { opacity: 0; transform: translate(-18%, -50%) scale(.96); }
-} */
-
-/* Reduce intensity on small screens so logos don't dominate the view */
-@media (max-width: 760px) {
-  .bg-logo { width: clamp(140px, 28vw, 340px); opacity: 0.12; }
-  .bg-logo.left { left: 4%; }
-  .bg-logo.right { right: 4%; }
-}
-
-/* Accessibility: respect users who prefer reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .bg-logo { animation: none !important; opacity: 0.3 !important; transform: translateY(-50%) scale(1) !important; }
-}
-
-.hero {
-        height: 100vh;
+      .hero {
+        height: 90vh;
         background: linear-gradient(90deg, #011733, #012a5e, #0048a5);
         display: flex;
         justify-content: center;
@@ -129,7 +126,7 @@
         padding: 0 20px;
         text-align: center;
         z-index: 2;
-        margin: 0 auto;
+        margin-top: -10px;
       }
       .hero-content h2 {
         font-size: 3rem;
@@ -242,9 +239,90 @@
         }
       }
 
-      .scroll-buttons {
+      .scroll-down {
         position: absolute;
-        bottom: 30px; /* appears near the bottom of the hero */
+        bottom: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+      }
+
+      .scroll-down span {
+        display: block;
+        width: 25px;
+        height: 25px;
+        border-bottom: 3px solid #ffffff;
+        border-right: 3px solid #fff;
+        transform: rotate(45deg);
+        margin: -10px;
+        animation: animate1 2s infinite;
+      }
+
+      @keyframes animate1 {
+        0% {
+          opacity: 1;
+          transform: rotate(45deg) translate(-20px, -20px);
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 1;
+          transform: rotate(45deg) translate(20px, 20px);
+        }
+      }
+
+      .nav-badge {
+      position: absolute;
+      top: 0px;
+      right: -18px;
+      width: 29px;
+      height: 15px;
+      background: red;
+      border-radius: 10%;
+      box-shadow: 0 0 0 rgba(255, 0, 0, 0.7);
+      animation: pulse 1.5s infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 10px;
+      /* font-family: "Dancing Script", cursive; */
+    }
+
+    /* Pulse animation */
+    @keyframes pulse {
+      0% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+      }
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 8px rgba(255, 0, 0, 0);
+      }
+      100% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+      .nav-badge {
+      position: absolute;
+      top: 340px;
+      right: -18px;
+      left:98px;
+    }
+    }
+
+      /* .scroll-buttons {
+        position: absolute;
+        bottom: 30px; 
         left: 50%;
         transform: translateX(-50%);
         display: flex;
@@ -271,7 +349,7 @@
        border-color: var(--highlight);
     }
 
-     html { scroll-behavior: smooth; }
+     html { scroll-behavior: smooth; } */
 
       /* Complete Hero ends  */
       /* Complete why starts  */
@@ -533,7 +611,7 @@
           </li>
         <!-- <li><a href="courses.html">Courses</a></li> -->
         <!-- <li><a href="code.html">Code</a></li> -->
-          <li><a href="openings.html">Positions</a></li>
+          <li><a href="openings.html">Positions</a><span class="nav-badge">NEW</span></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -566,7 +644,7 @@
         </li>
         <!-- <li><a href="courses.html">Courses</a></li> -->
         <!-- <li><a href="code.html">Code</a></li> -->
-        <li><a href="openings.html">Positions</a></li>
+        <li><a href="openings.html">Positions</a><span class="nav-badge">New</span></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -574,8 +652,8 @@
     <!-- Complete hero starts  -->
     <section class="hero">
   <!-- Decorative background logos (appear/disappear left & right) -->
-  <img src="images/CMRG Logo White.png" alt="" class="bg-logo left" aria-hidden="true" />
-  <img src="images/IIT MADRAS.png" alt="" class="bg-logo right" aria-hidden="true" />
+  <!-- <img src="images/CMRG Logo White.png" alt="" class="bg-logo left" aria-hidden="true" />
+  <img src="images/IIT MADRAS.png" alt="" class="bg-logo right" aria-hidden="true" /> -->
 
       <div class="hero-content">
         <h2></h2>
@@ -596,11 +674,15 @@
         <div></div>
         <div></div>
       </div>
+      <div class="scroll-down">
+  <span></span>
+  <span></span>
+</div>
       <!-- New scroll buttons -->
-      <div class="scroll-buttons" aria-hidden="true">
+      <!-- <div class="scroll-buttons" aria-hidden="true">
       <a href="#why-choose-section" class="scroll-btn">Why Choose Our Lab</a>
       <a href="#research-section" class="scroll-btn">Research Areas</a>
-      </div>
+      </div> -->
     </section>
     <!-- Complete hero ends  -->
     <!-- Complete why choose starts -->
@@ -707,6 +789,13 @@
           const heroBtn = document.querySelector(".hero-button a");
           heroBtn.textContent = hero.buttonText;
           heroBtn.href = hero.buttonLink;
+
+          document.querySelector('.scroll-down').addEventListener('click', () => {
+  window.scrollTo({
+    top: window.innerHeight,
+    behavior: 'smooth'
+  });
+});
 
           // WHY CHOOSE
           const whychoose = data.whyChoose;
