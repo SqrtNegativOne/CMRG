@@ -6,6 +6,22 @@
   "publications": [
     {
       "card": {
+        "thumbnail": "images/Pub_Journal_JAP_2025.jpg",
+        "card-heading": "A physics-aware deep learning model for shear band formation around collapsing pores in shocked reactive materials",
+        "author-name": "Cheng, X., Chen, B., Choi, J., Nguyen, Y.T., Seshadri, P. K., Verma, M., Udaykumar, H.S. and Baek, S.",
+        "year": "2025",
+        "citation": "0 citations",
+        "tags": ["Physics-informed machine learning", "Physics-aware recurrent convolutional neural networks", "Data-driven modeling"],
+        "category": "Journal",
+        "publication-title": "Journal of Applied Physics",
+        "description": "Modeling shock-to-detonation phenomena in energetic materials (EMs) requires capturing complex physical processes such as strong shocks, rapid changes in microstructural morphology, and nonlinear dynamics of chemical reaction fronts. These processes participate in energy localization at hotspots, which initiate chemical energy release leading to detonation. This study addresses the formation of hotspots in crystalline EMs subjected to weak-to-moderate shock loading, which, despite its critical relevance to the safe storage and handling of EMs, remains underexplored compared to the well-studied strong shock conditions. To overcome the computational challenges associated with direct numerical simulations, we advance the Physics-Aware Recurrent Convolutional Neural Network (PARCv2), which has been shown to be capable of predicting strong shock responses in EMs. We improved the architecture of PARCv2 to rapidly predict shear localizations and plastic heating, which play important roles in the weak-to-moderate shock regime. PARCv2 is benchmarked against two widely used physics-informed models, namely, Fourier neural operator and neural ordinary differential equation; we demonstrate its superior performance in capturing the spatiotemporal dynamics of shear band formation. While all models exhibit certain failure modes, our findings underscore the importance of domain-specific considerations in developing robust AI-accelerated simulation tools for reactive materials.",
+        "doi": "https://doi.org/10.1063/5.0294397",
+        "view-link": "https://pubs.aip.org/aip/jap/article/138/14/145105/3366892",
+        "pdf-link": "#"
+      }
+    },
+    {
+      "card": {
         "thumbnail": "images/Pub_Journal_1_IJMF_2024.jpg",
         "card-heading": "Physics-aware recurrent convolutional neural networks for modeling multiphase compressible flows.",
         "author-name": "Cheng, X., Nguyen, P. C. H., Seshadri, P. K., Verma, M. Gray, Z., Beerman, J., Udaykumar, H.S., and Baek, S.",
