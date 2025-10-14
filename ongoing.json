@@ -6,24 +6,24 @@
       "title": "High-Performance Computing & Solver Development",
       "subtitle": "Adaptive, Scalable, and Multiphysics-Ready",
       "icon": "⚡",
-      "overview": "Core lab effort: developing exascale-ready solvers built on Adaptive Mesh Refinement (AMR) and a Hybrid Sharp–Diffuse Interface Framework. These solver technologies underpin our shock hydrocodes, all-speed CFD, and multiscale couplers.",
+      "overview": "Core lab effort: developing exascale-ready solvers built on Adaptive Mesh Refinement (AMR) and a Hybrid Sharp–Diffuse Interface Framework. These solver technologies underpin our shock hydrocodes, all-speed CFD, and multiscale frameworks.",
       "publicationCount": 0,
       "currentProjects": [
-        "AMR-enabled hydrocodes and shock solvers",
-        "Density-based all-speed solver framework with low-Mach preconditioning",
+        "AMR-enabled hydrocodes",
+        "Density-based all-speed solver framework ",
         "Hybrid Sharp–Diffuse Interface methods integrated with AMR"
       ],
-      "tools": ["AMReX", "SCIMITAR3DeX", "Custom MPI/OpenMP codes"],
+      "tools": ["AMReX", "Alamo", "SCIMITAR3DeX"],
       "impact": [
         "Exascale-ready implementations for large HPC centers",
         "Unified solver frameworks that span Mach regimes and multiphase problems",
         "Reusable libraries and software components for group projects"
       ],
-      "image": "images/abstract-sphere-reflects-nature-beauty-close-up-generated-by-ai.jpg"
+      "image": "images/Research_Image_HPC.jpg"
     },
     {
       "title": "In-House Multi-Material Eulerian Hydrocode",
-      "subtitle": "High-Strain-Rate Physics and Shock Dynamics",
+      "subtitle": "High-Strain-Rate Physics and Shock Physics Dynamics",
       "icon": "🌊",
       "overview": "Scalable multi-material Eulerian hydrocode for shock propagation, impact and fragmentation problems. Designed to resolve sharp features while remaining robust in mixed-material zones using the hybrid interface approach.",
       "publicationCount": 0,
@@ -38,47 +38,29 @@
         "Improved designs for protective systems and planetary entry models",
         "Bridging experiments and simulations for validation"
       ],
-      "image": "images/abstract-sphere-reflects-nature-beauty-close-up-generated-by-ai.jpg"
+      "image": "images/Research_Image_Hydrocode.jpg"
     }
   ],
 
   "Energetic Materials & Reactive Systems": [
     {
       "title": "Energetic Materials & Reactive Systems",
-      "subtitle": "Initiation, Hot-Spot Physics, and Multiscale Reactivity",
+      "subtitle": "Initiation, Hot-Spot Physics, and Microstructure-aware burn models",
       "icon": "🔥",
       "overview": "Multiscale, multiphysics study of energetic materials from atomistic chemistry to continuum-scale initiation and run-to-detonation behavior. We combine DFT, MD, KMC and continuum reactive flow models for predictive capabilities.",
       "publicationCount": 0,
       "currentProjects": [
         "Hot-spot formation and growth in heterogeneous energetic materials",
         "Reactive burn models coupled to hydrocodes",
-        "Multiscale parameter passing: DFT → MD → continuum"
+        "Multiscale Framework: DFT → MD → continuum"
       ],
-      "tools": ["LAMMPS", "DFT Codes", "Kinetic Monte Carlo", "Custom reactive solvers"],
+      "tools": ["LAMMPS", "DFT Codes", "Kinetic Monte Carlo", "Alamo", "AMReX", "SCIMITAR3DeX"],
       "impact": [
         "Mechanistic insight into initiation and sensitivity",
         "Improved constitutive/reaction models for engineering simulations",
         "Data-driven parameter calibration linking experiments and simulation"
       ],
-      "image": "images/abstract-sphere-reflects-nature-beauty-close-up-generated-by-ai.jpg"
-    },
-    {
-      "title": "Reactive Multiscale Couplers",
-      "subtitle": "DFT-to-Continuum Workflows",
-      "icon": "🔬",
-      "overview": "Workflows that extract reaction pathways and rates from atomistic simulations and feed them into meso/continuum models for predictive reactive simulations under extreme loading.",
-      "publicationCount": 0,
-      "currentProjects": [
-        "Automated extraction of kinetics from DFT/MD",
-        "Kinetic Monte Carlo for mesoscale reaction networks",
-        "Uncertainty quantification for reactive model parameters"
-      ],
-      "tools": ["DFT Tools", "LAMMPS", "KMC frameworks", "Python workflow scripts"],
-      "impact": [
-        "Robust end-to-end reactive modeling chain",
-        "Reduced reliance on ad-hoc empirical parameters",
-        "Better predictive capability for energetic system design"
-      ]
+      "image": "images/Research_Image_Energetic_Materials.jpg"
     }
   ],
 
@@ -94,7 +76,7 @@
         "Topology and microstructure optimization for energy absorption",
         "Coupling experiments and simulations for validation"
       ],
-      "tools": ["Finite Element Codes", "Multiscale Homogenization", "Custom hydrocodes"],
+      "tools": ["Alamo", "AMReX", "SCIMITAR3DeX"],
       "impact": [
         "Guides design of lighter, more effective protective systems",
         "Translates microstructural design rules to engineering-scale performance",
@@ -111,15 +93,14 @@
       "overview": "Applying our all-speed solver technology and multiscale coupling to biofluids: cardiovascular flows, microfluidics, and transport in porous biological media. Emphasis on physiological fidelity and clinically relevant predictions.",
       "publicationCount": 0,
       "currentProjects": [
-        "Patient-specific cardiovascular flow simulations (low-Mach regime)",
+        "Patient-specific cardiovascular flow simulations",
         "Microfluidic device modelling with interface-resolving methods",
         "Transport and mixing of particulates/cells in complex geometries"
       ],
-      "tools": ["All-Speed Solvers", "Image-based geometry workflows", "Particle tracking modules"],
+      "tools": ["AMReX", "Alamo", "SCIMITAR3DeX", "Image-based geometry workflows"],
       "impact": [
         "Supports translational bioengineering and device design",
-        "Bridges physiological measurements and predictive modelling",
-        "Enables quantitative hypotheses for experimental collaborators"
+        "Bridges physiological measurements and predictive modelling"
       ]
     }
   ],
@@ -136,7 +117,7 @@
         "Aerothermochemical coupling in boundary layers at high enthalpy",
         "Multiscale methods for gas-surface interaction kinetics"
       ],
-      "tools": ["High-fidelity CFD", "DFT for surface reactions", "Coupled thermochemical solvers"],
+      "tools": ["Alamo", "AMReX", "SCIMITAR3DeX", "WarpX"],
       "impact": [
         "Improves predictive models for thermal protection systems",
         "Informs material selection and design for extreme environments",

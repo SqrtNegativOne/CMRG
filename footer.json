@@ -11,8 +11,6 @@
     },
     "quick-links": [
       {"name":"Research Areas","link":"ongoing.html"},
-      {"name":"Courses","link":"courses.html"},
-      {"name":"Open Source","link":"code.html"},
       {"name":"Join Our Team","link":"openings.html"},
       {"name":"Blogs","link":"blog.html"},
       {"name":"Contact Us","link":"contact.html"}
