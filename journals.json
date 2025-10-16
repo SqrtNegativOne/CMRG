@@ -1,7 +1,7 @@
 {
   "ribbon": {
     "title": "Publications",
-    "description": "Explore our research contributions to the scientific community through peer-reviewed publications, conference papers, and technical reports. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, voluptatibus?"
+    "description": "Explore our research contributions to the scientific community through peer-reviewed publications, conference papers, and technical reports."
   },
   "publications": [
     {
@@ -239,7 +239,7 @@
         "category": "Journal",
         "publication-title": "Journal of Flow Visualizations and Image Processing",
         "description": "The present study reports on flow past airfoils (stationary and moving) using a sharp interface immersed-boundary approach. A nonboundary conforming approach like the immersed-boundary method offers a viable alternative over traditional boundary conforming approach by allowing us to model flow past arbitrarily complex shapes, by eliminating the need to regrid the flow domain as the body exhibits motion. We present flow past a NACA 0012 airfoil under stationary conditions as well as exhibiting pitching motion. The evolution of vortex dynamics and wake structures are presented to show that the developed sharp interface immersed-boundary approach captures the flow physics of dynamic stall accurately. Moving body problems involving immersed-boundary approach usually encounter the issues of spurious oscillations and mass conservation. This is handled through a field extension strategy based on a ghost cell approach, which allows for extrapolating the flow field value onto the ghost nodes, ensuring smooth temporal transition as the immersed surface moves through time. The results presented here show excellent agreement with the experimental results found in the literature.",
-        "doi": "10.1615/JFlowVisImageProc.2020030995",
+        "doi": "https://doi.org/10.1615/JFlowVisImageProc.2020030995",
         "view-link": "https://www.dl.begellhouse.com/journals/52b74bd3689ab10b,38e46e5e497ac8cb,41cde98b141a82bb.html",
         "pdf-link": "#"
       }
