@@ -1,14 +1,14 @@
 {
   "ribbontitle": "Research",
   "ribbondesc": "Advancing the frontiers of computational multiphysics through innovative research and cutting-edge numerical methods.",
-  "Ongoing Funded Research": [
+  "Ongoing Sponsored Research": [
     {
       "projectCode": "Coming Soon",
       "title": "Our young research group is actively developing proposals in energetic materials, HPC solver development and shock-induced aerobreakup and combustion. We are building a strong foundation for future projects and welcome enthusiastic students, collaborators, and partners to engage with us as we grow."
     }
 
   ],
-  "Past Funded Research": [
+  "Past Sponsored Research": [
         {
       "projectCode": "DOD/AFOSR (FA9550-19-1-0318)",
       "funding": "$7,500,000",

@@ -206,9 +206,11 @@
           <h3></h3>
           <p></p>
           <div class="social-icons">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fas fa-envelope"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank" title="Github"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank" title="Mail"><i class="fas fa-envelope"></i></a>
+            <a href="#" target="_blank" title="Linked in"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+            <a href="#" target="_blank" title="ResearchGate" class="researchgate-link"><img src="images/rg logo.png" alt="ResearchGate" class="researchgate-icon" /></a>
           </div>
         </div>
         <!-- Column 2: Links -->
@@ -384,6 +386,8 @@
           socialLinks[0].href = footer.about.social.github;
           socialLinks[1].href = footer.about.social.mail;
           socialLinks[2].href = footer.about.social.linkedin;
+          socialLinks[3].href = footer.about.social.google_scholar;
+          socialLinks[4].href = footer.about.social.research_gate;
           const quickLinks = document.querySelector(".footer-column ul");
           quickLinks.innerHTML = "";
           footer["quick-links"].forEach((link) => {
