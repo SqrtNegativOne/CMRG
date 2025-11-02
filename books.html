@@ -12,7 +12,7 @@
     </script>        
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CMRG | Conferences</title>
+    <title>CMRG | Books</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="icon"
@@ -519,7 +519,7 @@
           console.log(allPublications);
       })
 
-      fetch("conference.json")
+      fetch("books.json")
         .then((response) => response.json())
         .then((data) => {
           // Ribbon
@@ -700,7 +700,7 @@
       const defaultBtn = document.querySelector(".button-group button");
       loadConferences(defaultType, defaultBtn);
     })
-    .catch((err) => console.error("Error loading conferences.json:", err));
+    .catch((err) => console.error("Error loading books.json:", err));
 
   // Make functions globally accessible
   window.filterConferences = filterConferences;

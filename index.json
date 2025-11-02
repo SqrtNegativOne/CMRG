@@ -3,7 +3,24 @@
     "title": "Computational Multi-Physics Research Group <br> Indian Institute of Technology, Madras",
     "description": "Bridging atoms to continuum, biology to ballistics — the CoMPhys Research Group at IIT Madras simulates every scale, every material, every interface, and every speed across defense, aerospace, energy, and bioinspired systems.",
     "buttonText": "Explore Now",
-    "buttonLink": "about.html"
+    "buttonLink": "about.html",
+    "updates": [
+      {
+        "title": "Positions Available!",
+        "text": "We are seeking passionate researchers to join our team to solve critical problems in multiphysics and computation.",
+        "image": "images/Blog1.png"
+      },
+      {
+        "title": "DRDO SHRISTI 2022",
+        "text": "Our team delivered a keynote at the DRDO SHRISTI conference organized by the Defence Research and Development.",
+        "image": "images/Blog2.png"
+      },
+      {
+        "title": "CoMPhys - PMC Sign MOU",
+        "text": "CoMPhys Research Group signed an MOU with PMC to promote academic and research collaboration.",
+        "image": "images/Pub_Journal_1_IJMF_2024.jpg"
+      }
+    ]
   },
   "whyChoose": {
     "heading": "Why Choose Our Lab",

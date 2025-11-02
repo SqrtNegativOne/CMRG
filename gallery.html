@@ -7,18 +7,103 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-VGCK9VFN9Y');
     </script>      
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Workshop Gallery</title>
-  <link rel="stylesheet" href="gallery.css" />
+  <title>CMRG | Gallery</title>
+  <link
+      rel="icon"
+      type="image/x-icon"
+      href="images/iit madras without bg.png"
+    />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="gallery.css">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 </head>
 <body>
-  <header>
-    <h1>Workshop Gallery</h1>
-  </header>
+  <!--Complete Header Starts-->
+    <header>
+      <div class="logo">
+        <img
+          src="images/CMRG Logo White.png"
+          alt="Computational Multiphysics Research Group"
+          class="brand"
+        />
+        <img src="images/IIT MADRAS.png" class="iit" alt="iit mardras" />
+      </div>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html">News</a></li>
+          <li><a href="about.html">People</a></li>
+          <li class="dropdown">
+            <a class="active">Research</a>
+            <div class="dropdown-content">
+              <a href="ongoing.html">Ongoing</a>
+              <a href="funded.html">Sponsored</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a>Publications</a>
+            <div class="dropdown-content">
+              <a href="journals.html">Journals</a>
+              <a href="conferences.html">Conferences</a>
+              <a href="books.html">Books</a>
+            </div>
+          </li>
+        <!-- <li><a href="courses.html">Courses</a></li> -->
+        <!-- <li><a href="code.html">Code</a></li> -->
+          <li><a href="openings.html">Positions</a><span class="nav-badge">NEW</span></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" onclick="toggleSidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </header>
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <div class="close-icon" onclick="toggleSidebar()">×</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">News</a></li>
+        <li><a href="about.html">People</a></li>
+        <li class="dropdown">
+          <div onclick="toggleDropdown(this)" class="active">Research ▾</div>
+          <ul class="submenu">
+            <li><a href="ongoing.html">Ongoing</a></li>
+            <li><a href="funded.html">Sponsored</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <div onclick="toggleDropdown(this)">Publications ▾</div>
+          <ul class="submenu">
+            <li><a href="journals.html">Journals</a></li>
+            <li><a href="conferences.html">Conferences</a></li>
+            <li><a href="books.html">Books</a></li>
+          </ul>
+        </li>
+        <!-- <li><a href="courses.html">Courses</a></li> -->
+        <!-- <li><a href="code.html">Code</a></li> -->
+        <li><a href="openings.html">Positions</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Complete Header Ends  -->
+    <!-- Complete ribbon starts  -->
+    <div class="ribbon">
+      <div class="ribbon-content">
+        <h1 class="ribbon-title"></h1>
+        <p class="ribbon-desc"></p>
+      </div>
+    </div>
+    <!-- Complete ribbon ends  -->
 
   <main>
     <!-- <div id="gallery" class="gallery"></div> -->
@@ -32,12 +117,64 @@
     <div id="caption" class="caption"></div>
   </div>
 
+  <!-- Complete footer starts  -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Column 1: About -->
+        <div class="footer-column about">
+          <h3></h3>
+          <p></p>
+          <div class="social-icons">
+            <a href="#" target="_blank" title="Github"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank" title="Mail"><i class="fas fa-envelope"></i></a>
+            <a href="#" target="_blank" title="Linked in"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+            <a href="#" target="_blank" title="ResearchGate" class="researchgate-link"><img src="images/rg logo.png" alt="ResearchGate" class="researchgate-icon" /></a>
+          </div>
+        </div>
+        <!-- Column 2: Links -->
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul></ul>
+        </div>
+        <!-- Column 3: Contact -->
+        <div class="footer-column contact-div">
+          <h4>Contact</h4>
+          <div style="display: flex; justify-content: center">
+            <ul class="contact-info"></ul>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="footer-bottom"></div>
+    </footer>
+    <!-- Complete footer ends  -->
+    <!-- loading header starts  -->
+    <script>
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("show");
+      }
+      function toggleDropdown(element) {
+        const parentLi = element.parentElement;
+        parentLi.classList.toggle("open");
+      }
+    </script>
+    <!-- loading header ends  -->
+    <!-- loading gallery starts  -->
   <script>
     // Fetch gallery data from JSON
 fetch("gallery.json")
   .then((res) => res.json())
   .then((data) => {
     const gallery = document.getElementById("gallery");
+
+    
+          document.querySelector(".ribbon-title").textContent =
+            data.ribbontitle;
+          document.querySelector(".ribbon-desc").textContent =
+            data.ribbondesc;
+          
 
     data.images.forEach((img) => {
       const div = document.createElement("div");
@@ -75,5 +212,75 @@ lightbox.addEventListener("click", (e) => {
 });
 
   </script>
+  <!-- loading gallery ends  -->
+   <!-- loading footer starts  -->
+    <script>
+      async function loadFooter() {
+        try {
+          const res = await fetch("footer.json");
+          const data = await res.json();
+          const footer = data.footer;
+          document.querySelector(".about h3").textContent = footer.about.title;
+          document.querySelector(".about p").innerHTML =
+            footer.about.description;
+          const socialLinks = document.querySelectorAll(".social-icons a");
+          socialLinks[0].href = footer.about.social.github;
+          socialLinks[1].href = footer.about.social.mail;
+          socialLinks[2].href = footer.about.social.linkedin;
+          socialLinks[3].href = footer.about.social.google_scholar;
+          socialLinks[4].href = footer.about.social.research_gate;
+          const quickLinks = document.querySelector(".footer-column ul");
+          quickLinks.innerHTML = "";
+          footer["quick-links"].forEach((link) => {
+            const li = document.createElement("li");
+            li.innerHTML = `<a href="${link.link}">${link.name}</a>`;
+            quickLinks.appendChild(li);
+          });
+          const contact = footer.contact;
+          const contactInfo = document.querySelector(".contact-info");
+          contactInfo.innerHTML = `
+            <li>
+              <table>
+                <tr">
+                  <td><i class="fas fa-map-marker-alt"></i></td>
+                  <td style="padding-left: 10px;">${contact.address}</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <table>
+                <tr">
+                  <td><i class="fa-solid fa-city"></i></td>
+                  <td style="padding-left: 10px;">${contact.address1}</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+            <li>
+              <table>
+                <tr>
+                  <td><i class="fas fa-phone-alt"></i></td>
+                  <td style="padding-left: 10px;">${contact.phone}</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <table>
+                <tr>
+                  <td><i class="fas fa-envelope"></i></td>
+                  <td style="padding-left: 10px;">${contact.email}</td>
+                </tr>
+              </table>
+            </li>
+        `;
+          document.querySelector(".footer-bottom").textContent =
+            footer["footer-note"];
+        } catch (err) {
+          console.error("Error loading publications data:", err);
+        }
+      }
+      loadFooter();
+    </script>
+    <!-- loading footer ends  -->
 </body>
 </html>

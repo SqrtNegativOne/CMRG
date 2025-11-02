@@ -1,32 +1,10 @@
 /* before-code start */
-/* * {
+/* 
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: #f9f9f9;
-  color: #333;
-}
-
-header {
-  text-align: center;
-  padding: 2rem 1rem;
-  background: #222;
-  color: white;
-}
-
-header h1 {
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-main {
-  padding: 2rem;
-}
-
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -99,29 +77,11 @@ main {
 } */
 
 /* before-code end */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: #f9fafb;
-  color: #333;
-}
-
-header {
-  text-align: center;
-  padding: 2rem 1rem;
-  background: linear-gradient(135deg, #222, #444);
-  color: white;
-}
-
-header h1 {
-  font-size: 2.2rem;
-  font-weight: 600;
-  letter-spacing: 1px;
 }
 
 main {
@@ -152,7 +112,8 @@ main {
   box-shadow: 0 2px 12px rgba(0,0,0,0.1);
   cursor: pointer;
   transition: transform 0.3s ease;
-  background: #fff;
+  background:grey;
+  border: 1px solid black;
 }
 
 .gallery-item img {
@@ -160,6 +121,7 @@ main {
   display: block;
   border-radius: 12px;
   transition: transform 0.4s ease, filter 0.4s ease;
+  /* border: 4px dashed black; */
 }
 
 .gallery-item:hover img {
@@ -178,6 +140,7 @@ main {
   height: 100%;
   overflow: auto;
   background: rgba(0,0,0,0.9);
+  /* border: 2px solid blue; */
 }
 
 .lightbox-img {
@@ -201,7 +164,7 @@ main {
   position: absolute;
   top: 25px;
   right: 40px;
-  color: #fff;
+  color: white;
   font-size: 35px;
   font-weight: bold;
   cursor: pointer;
@@ -209,5 +172,5 @@ main {
 }
 
 .close:hover {
-  color: #bbb;
+  color: var(--highlight);
 }
