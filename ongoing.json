@@ -61,7 +61,7 @@
       ],
       "image": "images/PyAMorph image.png",
       "imgtitle": "3D porous microstructure reconstructed via Chan-Vese segmentation on an AMReX MultiFab grid",
-      "link": "https://comphysgroup.github.io/PyAMorph/"
+      "link": "https://pyamorph.vercel.app/"
     }
   ],
 
